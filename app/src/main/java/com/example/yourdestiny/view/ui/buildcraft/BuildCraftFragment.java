@@ -1,4 +1,4 @@
-package com.example.yourdestiny.view.ui.notifications;
+package com.example.yourdestiny.view.ui.buildcraft;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,21 +10,21 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.yourdestiny.databinding.FragmentNotificationsBinding;
+import com.example.yourdestiny.databinding.FragmentBuildcraftBinding;
 
-public class NotificationsFragment extends Fragment {
+public class BuildCraftFragment extends Fragment {
 
-    private FragmentNotificationsBinding binding;
+    private FragmentBuildcraftBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        NotificationsViewModel notificationsViewModel =
-                new ViewModelProvider(this).get(NotificationsViewModel.class);
+        BuildCraftViewModel notificationsViewModel =
+                new ViewModelProvider(this).get(BuildCraftViewModel.class);
 
-        binding = FragmentNotificationsBinding.inflate(inflater, container, false);
+        binding = FragmentBuildcraftBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textNotifications;
+        final TextView textView = binding.textBuildcraft;
         notificationsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }

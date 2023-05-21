@@ -2,28 +2,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_home"
+        android:id="@+id/navigation_guides"
         android:icon="@drawable/raid_complex_3"
-        android:title="@string/title_home" />
+        android:title="@string/title_guides" />
 
     <item
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_collection"
         android:icon="@drawable/vault2_2"
-        android:title="@string/title_dashboard" />
+        android:title="@string/title_collection" />
 
     <item
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_buildcraft"
         android:icon="@drawable/meditations_2"
-        android:title="@string/title_notifications" />
+        android:title="@string/title_buildcraft" />
 
-    <item
-        android:id="@+id/navigation_2"
-        android:icon="@drawable/quest_flag_2"
-        android:title="@string/title_notifications" />
 
-    <item
-        android:id="@+id/navigation_3"
-        android:icon="@drawable/ghost_2"
-        android:title="@string/title_notifications" />
 
 </menu>
