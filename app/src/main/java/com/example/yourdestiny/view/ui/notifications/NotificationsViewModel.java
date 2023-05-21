@@ -1,4 +1,4 @@
-package com.example.yourdestiny.view.ui.ui.notifications;
+package com.example.yourdestiny.view.ui.notifications;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

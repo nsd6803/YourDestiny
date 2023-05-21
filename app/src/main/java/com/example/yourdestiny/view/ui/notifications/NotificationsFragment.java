@@ -1,4 +1,4 @@
-package com.example.yourdestiny.view.ui.ui.notifications;
+package com.example.yourdestiny.view.ui.notifications;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.yourdestiny.view.ui.databinding.FragmentNotificationsBinding;
+import com.example.yourdestiny.databinding.FragmentNotificationsBinding;
 
 public class NotificationsFragment extends Fragment {
 
