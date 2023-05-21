@@ -9,12 +9,13 @@
     <item
         android:id="@+id/navigation_collection"
         android:icon="@drawable/vault2_2"
-        android:title="@string/title_collection" />
+        android:title="@string/title_collection"
+        />
 
     <item
         android:id="@+id/navigation_buildcraft"
         android:icon="@drawable/meditations_2"
-        android:title="@string/title_buildcraft" />
+        android:title="@string/title_buildcraft"/>
 
     <item
         android:id="@+id/navigation_triumph"
