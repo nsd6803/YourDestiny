@@ -1,4 +1,4 @@
-package com.example.yourdestiny;
+package com.example.yourdestiny.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,7 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
+
+import com.example.yourdestiny.R;
 
 public class PassRestore extends AppCompatActivity {
 
