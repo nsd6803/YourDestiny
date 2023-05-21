@@ -10,7 +10,7 @@ public class BuildCraftViewModel extends ViewModel {
 
     public BuildCraftViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is notifications fragment");
+        mText.setValue("This is buildcraft fragment");
     }
 
     public LiveData<String> getText() {

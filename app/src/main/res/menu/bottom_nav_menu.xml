@@ -16,6 +16,14 @@
         android:icon="@drawable/meditations_2"
         android:title="@string/title_buildcraft" />
 
+    <item
+        android:id="@+id/navigation_triumph"
+        android:icon="@drawable/quest_flag_2"
+        android:title="@string/title_triumph" />
 
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ghost_2"
+        android:title="@string/title_profile" />
 
 </menu>

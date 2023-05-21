@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         catch (NullPointerException e){}
         setContentView(R.layout.activity_main);
 
+
         TextView registr = findViewById(R.id.textView5);
         registr.setOnClickListener(new View.OnClickListener() {
             @Override

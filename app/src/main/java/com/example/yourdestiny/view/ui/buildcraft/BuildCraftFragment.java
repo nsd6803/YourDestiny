@@ -18,14 +18,14 @@ public class BuildCraftFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        BuildCraftViewModel notificationsViewModel =
+        BuildCraftViewModel buildCraftViewModel =
                 new ViewModelProvider(this).get(BuildCraftViewModel.class);
 
         binding = FragmentBuildcraftBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         final TextView textView = binding.textBuildcraft;
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        buildCraftViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

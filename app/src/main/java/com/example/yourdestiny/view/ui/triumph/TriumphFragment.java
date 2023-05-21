@@ -10,22 +10,22 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.yourdestiny.databinding.FragmentGuidesBinding;
+import com.example.yourdestiny.databinding.FragmentProfileBinding;
 
 public class TriumphFragment extends Fragment {
 
-    private FragmentGuidesBinding binding;
+    private FragmentProfileBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        TriumphViewModel homeViewModel =
+        TriumphViewModel triumphViewModel =
                 new ViewModelProvider(this).get(TriumphViewModel.class);
 
-        binding = FragmentGuidesBinding.inflate(inflater, container, false);
+        binding = FragmentProfileBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textGuides;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        final TextView textView = binding.textProfile;
+        triumphViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

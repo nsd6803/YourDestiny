@@ -10,7 +10,7 @@ public class GuidesViewModel extends ViewModel {
 
     public GuidesViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
+        mText.setValue("This is guides fragment");
     }
 
     public LiveData<String> getText() {

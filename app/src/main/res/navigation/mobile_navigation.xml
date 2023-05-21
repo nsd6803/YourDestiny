@@ -22,4 +22,16 @@
         android:name="com.example.yourdestiny.view.ui.buildcraft.BuildCraftFragment"
         android:label="@string/title_buildcraft"
         tools:layout="@layout/fragment_buildcraft" />
+
+    <fragment
+        android:id="@+id/navigation_triumph"
+        android:name="com.example.yourdestiny.view.ui.triumph.TriumphFragment"
+        android:label="@string/title_triumph"
+        tools:layout="@layout/fragment_triumph" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.yourdestiny.view.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>

@@ -18,14 +18,14 @@ public class GuidesFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        GuidesViewModel homeViewModel =
+        GuidesViewModel guidesViewModel =
                 new ViewModelProvider(this).get(GuidesViewModel.class);
 
         binding = FragmentGuidesBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         final TextView textView = binding.textGuides;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        guidesViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

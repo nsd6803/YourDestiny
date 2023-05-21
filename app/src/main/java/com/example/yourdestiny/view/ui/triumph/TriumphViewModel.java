@@ -10,7 +10,7 @@ public class TriumphViewModel extends ViewModel {
 
     public TriumphViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
+        mText.setValue("This is triumph fragment");
     }
 
     public LiveData<String> getText() {
