@@ -11,7 +11,7 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="188dp"
+        android:layout_marginTop="268dp"
         android:fontFamily="sans-serif-medium"
         android:text="BuildCraft"
         android:textColor="@color/white"
@@ -35,6 +35,7 @@
         app:layout_constraintVertical_bias="0.073" />
 
     <Button
+        app:cornerRadius="56dp"
         android:id="@+id/button6"
         android:layout_width="179dp"
         android:layout_height="58dp"

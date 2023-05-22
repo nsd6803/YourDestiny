@@ -22,9 +22,9 @@ public class BuildCraftFragment extends Fragment {
 
         binding = FragmentBuildcraftBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-
         return root;
     }
+
 
     @Override
     public void onDestroyView() {
