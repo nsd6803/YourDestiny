@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -55,12 +56,14 @@ public class TriumphFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         recyclerView = getView().findViewById(R.id.triumph_view_list);
-
+        TextView textView = getView().findViewById(R.id.title_2);
+        textView.setText(R.string.title_triumph);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
         progAdapter = new TriumphAdapter(getActivity(), dungeons_pics, dungeon_names);
         recyclerView.setAdapter(progAdapter);
     }
+
 
     @Override
     public void onDestroyView() {

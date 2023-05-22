@@ -7,10 +7,25 @@
     tools:context=".view.ui.triumph.TriumphFragment"
     android:background="@color/black">
 
+    <TextView
+        android:id="@+id/title_2"
+        android:layout_width="185dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center|start"
+        android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/triumph_view_list"
-        android:layout_width="369dp"
-        android:layout_height="708dp"
+        android:layout_width="347dp"
+        android:layout_height="632dp"
+        android:layout_marginTop="56dp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
