@@ -6,4 +6,7 @@
     <string name="title_buildcraft">BuildCraft</string>
     <string name="title_triumph">Триумфы</string>
     <string name="title_profile">Профиль</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

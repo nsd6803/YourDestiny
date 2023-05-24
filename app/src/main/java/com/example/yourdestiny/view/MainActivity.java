@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -54,5 +55,14 @@ public class MainActivity extends AppCompatActivity {
                         arg.getContext().startActivity(intent);
                     }
             });
+
+        ImageView imageView = findViewById(R.id.to_OB);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg) {
+                Intent intent = new Intent(arg.getContext(), OnBoarding.class);
+                arg.getContext().startActivity(intent);
+            }
+        });
     }
 }

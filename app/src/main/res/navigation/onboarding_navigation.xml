@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:defaultNavHost="true"
+    android:name="OnBoarding_Nav"
+    app:startDestination="@+id/onBoard_1"
+    >
+
+
+    <fragment
+        android:id="@+id/onBoard_1"
+        android:name="com.example.yourdestiny.view.ui.onboarding.OnBoarding_1"
+        android:label="@string/title_guides"
+        tools:layout="@layout/fragment_on_boarding_1" >
+        <action
+            android:id="@+id/action_onBoard_1_to_onBoard_2"
+            app:destination="@id/onBoard_2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/onBoard_2"
+        android:name="com.example.yourdestiny.view.ui.onboarding.OnBoarding_2"
+        android:label="@string/title_collection"
+        tools:layout="@layout/fragment_on_boarding_2" >
+        <action
+            android:id="@+id/action_onBoard_2_to_onBoard_3"
+            app:destination="@id/onBoard_3" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/onBoard_3"
+        android:name="com.example.yourdestiny.view.ui.onboarding.OnBoarding_3"
+        android:label="@string/title_guides"
+        tools:layout="@layout/fragment_on_boarding_3" >
+        <action
+            android:id="@+id/action_onBoard_3_to_onBoard_4"
+            app:destination="@id/onBoard_4" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/onBoard_4"
+        android:name="com.example.yourdestiny.view.ui.onboarding.OnBoarding_4"
+        android:label="@string/title_buildcraft"
+        tools:layout="@layout/fragment_on_boarding_4" />
+</navigation>
