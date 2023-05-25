@@ -1,9 +1,11 @@
 package com.example.yourdestiny.view;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimatedVectorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,6 +35,17 @@ public class SignUp extends AppCompatActivity {
             public void onClick(View arg) {
                 Intent intent = new Intent(arg.getContext(), MainActivity.class);
                 arg.getContext().startActivity(intent);
+            }
+        });
+
+        ImageView imageView = findViewById(R.id.imageView28);
+        imageView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View arg){
+                AnimatedVectorDrawable drawable = (AnimatedVectorDrawable) imageView.getDrawable();
+                if(drawable!= null){
+                    drawable.start();
+                }
             }
         });
     }

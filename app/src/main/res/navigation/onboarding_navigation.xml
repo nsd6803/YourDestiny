@@ -16,7 +16,9 @@
         tools:layout="@layout/fragment_on_boarding_1" >
         <action
             android:id="@+id/action_onBoard_1_to_onBoard_2"
-            app:destination="@id/onBoard_2" />
+            app:destination="@id/onBoard_2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
     </fragment>
 
     <fragment
@@ -26,7 +28,9 @@
         tools:layout="@layout/fragment_on_boarding_2" >
         <action
             android:id="@+id/action_onBoard_2_to_onBoard_3"
-            app:destination="@id/onBoard_3" />
+            app:destination="@id/onBoard_3"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
     </fragment>
 
 
@@ -37,7 +41,9 @@
         tools:layout="@layout/fragment_on_boarding_3" >
         <action
             android:id="@+id/action_onBoard_3_to_onBoard_4"
-            app:destination="@id/onBoard_4" />
+            app:destination="@id/onBoard_4"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
     </fragment>
 
     <fragment

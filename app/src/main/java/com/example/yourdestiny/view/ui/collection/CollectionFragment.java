@@ -13,9 +13,9 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.yourdestiny.R;
 import com.example.yourdestiny.databinding.FragmentCollectionBinding;
+import com.example.yourdestiny.model.BungieApiRequest;
 
 public class CollectionFragment extends Fragment {
-
     private FragmentCollectionBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -34,6 +34,9 @@ public class CollectionFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         TextView textView = getView().findViewById(R.id.title_3);
         textView.setText(R.string.title_collection);
+        BungieApiRequest.getWeaponInfo("1660030043", "c3c4022acb1140b99840873c142bc198");
+
+
     }
     @Override
     public void onDestroyView() {
