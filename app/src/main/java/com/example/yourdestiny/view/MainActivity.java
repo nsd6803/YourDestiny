@@ -2,6 +2,7 @@ package com.example.yourdestiny.view;
 
 import android.Manifest;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
@@ -20,6 +21,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SharedPreferences prefs = getPreferences(MODE_PRIVATE);
+        if (prefs.getBoolean("isFirstRun", true)) {
+            Intent myIntent = new Intent(MainActivity.this, OnBoarding.class);
+            MainActivity.this.startActivity(myIntent);
+        }
+
+        prefs.edit().putBoolean("isFirstRun", false).apply();
         if (ActivityCompat.checkSelfPermission(this,
                 Manifest.permission.INTERNET) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{
