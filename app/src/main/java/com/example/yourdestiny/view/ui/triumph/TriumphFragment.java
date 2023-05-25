@@ -70,4 +70,5 @@ public class TriumphFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
+
 }

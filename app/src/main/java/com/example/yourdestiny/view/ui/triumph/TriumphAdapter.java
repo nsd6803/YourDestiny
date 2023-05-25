@@ -1,6 +1,8 @@
 package com.example.yourdestiny.view.ui.triumph;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.yourdestiny.R;
@@ -21,6 +24,12 @@ public class TriumphAdapter extends RecyclerView.Adapter<TriumphAdapter.ViewHold
     String[] set_titles;
     String[] titles;
     int[] images;
+
+    private AdapterView.OnItemClickListener onItemClickListener;
+
+    public void setOnItemClickListener(AdapterView.OnItemClickListener listener) {
+        this.onItemClickListener = listener;
+    }
 
     public TriumphAdapter (Context context, int[] images, String[] titles){
         this.context = context;
@@ -52,8 +61,12 @@ public class TriumphAdapter extends RecyclerView.Adapter<TriumphAdapter.ViewHold
                 @Override
                 public void onClick(View v) {
                     int pos = getAdapterPosition() + 1;
+                    //Bundle bundle = new Bundle();
+                    //bundle.putInt("NUmber", pos);
+                    //Navigation.findNavController(v).navigate(R.id.action_navigation_triumph_to_navigation_triumph_item);
                     Log.i(TAG, "Клик " + pos + " элемента");
                     Toast.makeText(image.getContext(), "Клик " + pos + " элемента", Toast.LENGTH_SHORT).show();
+
                 }
             });
         }
@@ -69,9 +82,19 @@ public class TriumphAdapter extends RecyclerView.Adapter<TriumphAdapter.ViewHold
     }
 
     @Override
-    public void onBindViewHolder(@NonNull TriumphAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull TriumphAdapter.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.image.setImageResource(images[position]);
         holder.title.setText(titles[position]);
+        System.out.println(images[position]);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle bundle = new Bundle();
+                bundle.putString("Name", holder.title.getText().toString());
+                bundle.putInt("Image", images[position]);
+                Navigation.findNavController(v).navigate(R.id.action_navigation_triumph_to_navigation_triumph_item, bundle);
+            }
+        });
     }
 
     @Override
