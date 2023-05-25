@@ -15,7 +15,17 @@
         android:id="@+id/navigation_collection"
         android:name="com.example.yourdestiny.view.ui.collection.CollectionFragment"
         android:label="@string/title_collection"
-        tools:layout="@layout/fragment_collection" />
+        tools:layout="@layout/fragment_collection" >
+        <action
+            android:id="@+id/action_navigation_collection_to_navigation_weapon"
+            app:destination="@id/navigation_weapon" />
+        <action
+            android:id="@+id/action_navigation_collection_to_navigation_new"
+            app:destination="@id/navigation_new" />
+        <action
+            android:id="@+id/action_navigation_collection_to_navigation_armor"
+            app:destination="@id/navigation_armor" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_buildcraft"
@@ -34,4 +44,35 @@
         android:name="com.example.yourdestiny.view.ui.profile.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/navigation_weapon"
+        android:name="com.example.yourdestiny.view.ui.collection.WeaponFragment"
+        android:label="Оружие"
+        tools:layout="@layout/fragment_weapon" >
+
+        <action
+            android:id="@+id/action_navigation_weapon_to_navigation_collection"
+            app:destination="@id/navigation_collection" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_armor"
+        android:name="com.example.yourdestiny.view.ui.collection.ArmorFragment"
+        android:label="Броня"
+        tools:layout="@layout/fragment_armor" >
+        <action
+            android:id="@+id/action_navigation_armor_to_navigation_collection"
+            app:destination="@id/navigation_collection" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_new"
+        android:name="com.example.yourdestiny.view.ui.collection.NewFragment"
+        android:label="Новое"
+        tools:layout="@layout/fragment_new" >
+        <action
+            android:id="@+id/action_navigation_new_to_navigation_collection"
+            app:destination="@id/navigation_collection" />
+    </fragment>
+
 </navigation>

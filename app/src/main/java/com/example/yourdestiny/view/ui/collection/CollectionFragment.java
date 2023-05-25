@@ -4,12 +4,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 
 import com.example.yourdestiny.R;
 import com.example.yourdestiny.databinding.FragmentCollectionBinding;
@@ -36,6 +38,29 @@ public class CollectionFragment extends Fragment {
         textView.setText(R.string.title_collection);
         BungieApiRequest.getWeaponInfo("1660030043", "c3c4022acb1140b99840873c142bc198");
 
+        ImageView weapons = getView().findViewById(R.id.imageView9);
+        weapons.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg) {
+                Navigation.findNavController(arg).navigate(R.id.action_navigation_collection_to_navigation_weapon);
+            }
+        });
+
+        ImageView armor = getView().findViewById(R.id.imageView10);
+        armor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg) {
+                Navigation.findNavController(arg).navigate(R.id.action_navigation_collection_to_navigation_armor);
+            }
+        });
+
+        ImageView neww = getView().findViewById(R.id.imageView7);
+        neww.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg) {
+                Navigation.findNavController(arg).navigate(R.id.action_navigation_collection_to_navigation_new);
+            }
+        });
 
     }
     @Override
