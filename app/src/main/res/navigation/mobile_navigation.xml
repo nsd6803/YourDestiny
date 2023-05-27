@@ -35,7 +35,11 @@
         android:id="@+id/navigation_buildcraft"
         android:name="com.example.yourdestiny.view.ui.buildcraft.BuildCraftFragment"
         android:label="@string/title_buildcraft"
-        tools:layout="@layout/fragment_buildcraft" />
+        tools:layout="@layout/fragment_buildcraft" >
+        <action
+            android:id="@+id/action_navigation_buildcraft_to_navigation_class"
+            app:destination="@id/navigation_class" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_triumph"
@@ -103,6 +107,61 @@
         <action
             android:id="@+id/action_navigation_game_activity_to_navigation_guides"
             app:destination="@id/navigation_guides" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_class"
+        android:name="com.example.yourdestiny.view.ui.buildcraft.ClassFragment"
+        android:label="Класс"
+        tools:layout="@layout/fragment_class" >
+        <action
+            android:id="@+id/action_navigation_class_to_navigation_subclass"
+            app:destination="@id/navigation_subclass" />
+        <action
+            android:id="@+id/action_navigation_class_to_navigation_buildcraft"
+            app:destination="@id/navigation_buildcraft" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_subclass"
+        android:name="com.example.yourdestiny.view.ui.buildcraft.SubclassFragment"
+        android:label="Подкласс"
+        tools:layout="@layout/fragment_subclass" >
+        <action
+            android:id="@+id/action_navigation_subclass_to_navigation_class"
+            app:destination="@id/navigation_class" />
+        <action
+            android:id="@+id/action_navigation_subclass_to_navigation_buildcraft"
+            app:destination="@id/navigation_buildcraft" />
+        <action
+            android:id="@+id/action_navigation_subclass_to_navigation_activity"
+            app:destination="@id/navigation_activity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_activity"
+        android:name="com.example.yourdestiny.view.ui.buildcraft.ActivityFragment"
+        android:label="Активность_БК"
+        tools:layout="@layout/fragment_activity" >
+        <action
+            android:id="@+id/action_navigation_activity_to_navigation_buildcraft"
+            app:destination="@id/navigation_buildcraft" />
+        <action
+            android:id="@+id/action_navigation_activity_to_navigation_subclass"
+            app:destination="@id/navigation_subclass" />
+        <action
+            android:id="@+id/action_navigation_activity_to_navigation_result"
+            app:destination="@id/navigation_result" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_result"
+        android:name="com.example.yourdestiny.view.ui.buildcraft.BuildCraftResultFragment"
+        android:label="Результат"
+        tools:layout="@layout/fragment_build_craft_result" >
+        <action
+            android:id="@+id/action_navigation_result_to_navigation_buildcraft"
+            app:destination="@id/navigation_buildcraft" />
     </fragment>
 
 </navigation>
