@@ -4,27 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.ui.collection.NewFragment"
+    tools:context=".view.ui.guides.GameActivityFragment"
     android:background="@color/black">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/imageView30"
-            android:layout_width="39dp"
-            android:layout_height="37dp"
-            android:layout_marginEnd="11dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/title_5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.018"
-            app:srcCompat="@drawable/back" />
-
         <TextView
-            android:id="@+id/title_5"
+            android:id="@+id/title_7"
             android:layout_width="185dp"
             android:layout_height="54dp"
             android:layout_marginTop="4dp"
@@ -37,5 +25,27 @@
             app:layout_constraintHorizontal_bias="0.221"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView28"
+            android:layout_width="39dp"
+            android:layout_height="37dp"
+            android:layout_marginEnd="11dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/title_5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.018"
+            app:srcCompat="@drawable/back" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/game_activity"
+            android:layout_width="413dp"
+            android:layout_height="640dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_7"
+            app:layout_constraintVertical_bias="0.111" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

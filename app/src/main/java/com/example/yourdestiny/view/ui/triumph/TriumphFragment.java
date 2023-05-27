@@ -20,7 +20,7 @@ public class TriumphFragment extends Fragment {
 
     private FragmentTriumphBinding binding;
 
-    private String[] dungeon_names = new String[] {
+    private String[] triumph_names = new String[] {
             "Queensguard",
             "Dream Warrior",
             "Virtual Fighter",
@@ -29,7 +29,7 @@ public class TriumphFragment extends Fragment {
             "Flawless"
     };
 
-    private int[] dungeons_pics = new int[]{
+    private int[] triumph_pics = new int[]{
             R.drawable.queensguard,
             R.drawable.dream_warrior,
             R.drawable.virtual_fighter,
@@ -60,7 +60,7 @@ public class TriumphFragment extends Fragment {
         textView.setText(R.string.title_triumph);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
-        progAdapter = new TriumphAdapter(getActivity(), dungeons_pics, dungeon_names);
+        progAdapter = new TriumphAdapter(getActivity(), triumph_pics, triumph_names);
         recyclerView.setAdapter(progAdapter);
     }
 

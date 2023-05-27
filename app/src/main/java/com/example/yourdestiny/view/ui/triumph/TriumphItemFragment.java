@@ -44,7 +44,8 @@ public class TriumphItemFragment extends Fragment {
         textView.setText(Title);
         ImageView imageView = getView().findViewById(R.id.imageView35);
         imageView.setImageResource(Image);
-        imageView.setOnClickListener(new View.OnClickListener() {
+        ImageView imageView2 = getView().findViewById(R.id.imageView34);
+        imageView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg) {
                 Navigation.findNavController(arg).navigate(R.id.action_navigation_triumph_item_to_navigation_triumph);

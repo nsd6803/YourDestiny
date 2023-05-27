@@ -12,6 +12,7 @@
         android:layout_width="185dp"
         android:layout_height="54dp"
         android:layout_marginTop="4dp"
+        android:fontFamily="sans-serif-medium"
         android:gravity="center|start"
         android:text="TextView"
         android:textColor="@color/white"
@@ -24,7 +25,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/triumph_view_list"
         android:layout_width="347dp"
-        android:layout_height="632dp"
+        android:layout_height="650dp"
         android:layout_marginTop="56dp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"

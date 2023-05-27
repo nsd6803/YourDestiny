@@ -20,7 +20,7 @@
             android:layout_height="64dp"
             android:layout_marginBottom="192dp"
             android:backgroundTint="@color/red"
-            android:text="Присоединяйся!"
+            android:text="Далее"
             android:textColor="@color/white"
             android:textColorHighlight="@color/white"
             android:textColorHint="@color/white"

@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/image_res"
-        android:layout_width="166dp"
-        android:layout_height="252dp"
+        android:layout_width="140dp"
+        android:layout_height="211dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -24,19 +24,18 @@
 
     <TextView
         android:id="@+id/text_list_res"
-        android:layout_width="166dp"
-        android:layout_height="69dp"
+        android:layout_width="134dp"
+        android:layout_height="50dp"
         android:layout_alignStart="@+id/image_res"
         android:layout_alignBottom="@+id/image_res"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="188dp"
         android:layout_toRightOf="@id/image_res"
         android:gravity="center"
         android:text="Name"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/image_res"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/image_res"
         app:layout_constraintTop_toTopOf="parent" />
 

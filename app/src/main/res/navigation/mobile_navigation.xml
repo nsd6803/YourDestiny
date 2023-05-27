@@ -9,7 +9,11 @@
         android:id="@+id/navigation_guides"
         android:name="com.example.yourdestiny.view.ui.guides.GuidesFragment"
         android:label="@string/title_guides"
-        tools:layout="@layout/fragment_guides" />
+        tools:layout="@layout/fragment_guides" >
+        <action
+            android:id="@+id/action_navigation_guides_to_navigation_game_activity"
+            app:destination="@id/navigation_game_activity" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_collection"
@@ -88,6 +92,17 @@
         <action
             android:id="@+id/action_navigation_triumph_item_to_navigation_triumph"
             app:destination="@id/navigation_triumph" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_game_activity"
+        android:name="com.example.yourdestiny.view.ui.guides.GameActivityFragment"
+        android:label="Активность"
+        tools:layout="@layout/fragment_game_activity" >
+        <action
+            android:id="@+id/action_navigation_game_activity_to_navigation_guides"
+            app:destination="@id/navigation_guides" />
     </fragment>
 
 </navigation>
