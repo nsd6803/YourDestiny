@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_navigation_guides_to_navigation_game_activity"
             app:destination="@id/navigation_game_activity" />
+        <action
+            android:id="@+id/action_navigation_guides_to_navigation_news"
+            app:destination="@id/navigation_news" />
     </fragment>
 
     <fragment
@@ -55,7 +58,14 @@
         android:id="@+id/navigation_profile"
         android:name="com.example.yourdestiny.view.ui.profile.ProfileFragment"
         android:label="@string/title_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_navigation_profile_to_navigation_news"
+            app:destination="@id/navigation_news" />
+        <action
+            android:id="@+id/action_navigation_profile_to_navigation_api"
+            app:destination="@id/navigation_api" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_weapon"
@@ -162,6 +172,30 @@
         <action
             android:id="@+id/action_navigation_result_to_navigation_buildcraft"
             app:destination="@id/navigation_buildcraft" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_news"
+        android:name="com.example.yourdestiny.view.ui.profile.NewsFragment"
+        android:label="Новости"
+        tools:layout="@layout/fragment_news" >
+        <action
+            android:id="@+id/action_navigation_news_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
+        <action
+            android:id="@+id/action_navigation_news_to_navigation_guides"
+            app:destination="@id/navigation_guides" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_api"
+        android:name="com.example.yourdestiny.view.ui.profile.ApiFragment"
+        android:label="API"
+        tools:layout="@layout/fragment_api" >
+
+        <action
+            android:id="@+id/action_navigation_api_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
     </fragment>
 
 </navigation>

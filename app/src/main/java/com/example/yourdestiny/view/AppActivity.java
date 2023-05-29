@@ -17,7 +17,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class AppActivity extends AppCompatActivity {
 
     private ActivityAppBinding binding;
-
+    private NavController navController;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,14 +29,10 @@ public class AppActivity extends AppCompatActivity {
         navView.setItemTextColor(ColorStateList.valueOf(ContextCompat.getColor(this, R.color.white)));
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_guides, R.id.navigation_collection, R.id.navigation_buildcraft,
-                R.id.navigation_triumph, R.id.navigation_profile, R.id.navigation_collection, R.id.navigation_armor, R.id.navigation_new,
-                R.id.navigation_triumph_item, R.id.navigation_game_activity, R.id.navigation_class, R.id.navigation_subclass,
-                R.id.navigation_activity, R.id.navigation_result)
+                R.id.navigation_triumph, R.id.navigation_profile)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_app);
         NavigationUI.setupWithNavController(binding.navView, navController);
-
-
     }
 
 }
