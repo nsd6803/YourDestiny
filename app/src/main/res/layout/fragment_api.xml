@@ -39,7 +39,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView47"
+            android:id="@+id/dim"
             android:layout_width="293dp"
             android:layout_height="117dp"
             android:src="@drawable/dim"
@@ -50,7 +50,7 @@
             app:layout_constraintVertical_bias="0.037" />
 
         <ImageView
-            android:id="@+id/imageView48"
+            android:id="@+id/lfg"
             android:layout_width="293dp"
             android:layout_height="117dp"
             android:layout_marginTop="28dp"
@@ -58,18 +58,18 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView47"
+            app:layout_constraintTop_toBottomOf="@+id/dim"
             app:layout_constraintVertical_bias="0.0" />
 
         <ImageView
-            android:id="@+id/imageView49"
+            android:id="@+id/lgg"
             android:layout_width="293dp"
             android:layout_height="117dp"
             android:src="@drawable/lightgg"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView48"
+            app:layout_constraintTop_toBottomOf="@+id/lfg"
             app:layout_constraintVertical_bias="0.084" />
 
         <ImageView
@@ -80,7 +80,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView49"
+            app:layout_constraintTop_toBottomOf="@+id/lgg"
             app:layout_constraintVertical_bias="0.166" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

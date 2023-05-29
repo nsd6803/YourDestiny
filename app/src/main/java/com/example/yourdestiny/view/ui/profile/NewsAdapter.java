@@ -2,6 +2,9 @@ package com.example.yourdestiny.view.ui.profile;
 
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,22 +26,28 @@ public class NewsAdapter extends RecyclerView.Adapter<com.example.yourdestiny.vi
     String[] titles;
     int[] images;
 
+    String[] url;
+    String[] set_url;
+
     private AdapterView.OnItemClickListener onItemClickListener;
 
     public void setOnItemClickListener(AdapterView.OnItemClickListener listener) {
         this.onItemClickListener = listener;
     }
 
-    public NewsAdapter (Context context, int[] images, String[] titles){
+    public NewsAdapter (Context context, int[] images, String[] titles, String[] url){
         this.context = context;
         this.set_images = images;
         this.set_titles = titles;
+        this.set_url = url;
         this.titles = new String[titles.length];
         this.images = new int[images.length];
+        this.url = new String[url.length];
         int random_number;
         for (int i = 0; i <= images.length-1; i++){
             this.titles[i] = set_titles[i];
             this.images[i] = set_images[i];
+            this.url[i] = set_url[i];
         }
     }
 
@@ -80,21 +89,16 @@ public class NewsAdapter extends RecyclerView.Adapter<com.example.yourdestiny.vi
     public void onBindViewHolder(@NonNull com.example.yourdestiny.view.ui.profile.NewsAdapter.ViewHolder holder, int position) {
         holder.title.setText(titles[position]);
         holder.image.setImageResource(images[position]);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String link = url[position];
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(link));
+                context.startActivity(intent);
+            }
+        });
     }
-
-
-    //@Override
-    //public void onBindViewHolder(@NonNull com.example.yourdestiny.view.ui.guides.GameActivityFragment.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
-    //    holder.title.setText(titles[position]);
-    //    holder.itemView.setOnClickListener(new View.OnClickListener() {
-    //        @Override
-    //        public void onClick(View v) {
-    //            Bundle bundle = new Bundle();
-    //            bundle.putString("Name", holder.title.getText().toString());
-    //            Navigation.findNavController(v).navigate(R.id.action_navigation_triumph_to_navigation_triumph_item, bundle);
-    //        }
-    //    });
-    //}
 
     @Override
     public int getItemCount() {

@@ -23,23 +23,36 @@ public class NewsFragment extends Fragment {
     RecyclerView.Adapter progAdapter;
 
     private String[] news_names = new String[] {
-            "Источник Кошмаров",
-            "Падение Короля",
-            "Клятва Послушника",
-            "Хранилище Стекла",
-            "Склеп Глубокого Камня",
-            "Сад Спасения",
-            "Последнее Желание"
+            "Хотфикс 26/05/23",
+            "TWAB 25/05/23",
+            "Обновление 7.1.0",
+            "TWAB 18/05/23",
+            "Хотфикс 7.0.5.3",
+            "TWAB 11/05/23",
+            "TWAB 04/05/23",
+            "Хотфикс 7.0.5.2"
     };
 
     private int[] news_pics = new int[]{
-            R.drawable.ron,
-            R.drawable.kf,
-            R.drawable.vod,
-            R.drawable.vog,
-            R.drawable.dsc,
-            R.drawable.gos,
-            R.drawable.lw
+            R.drawable.hotfix,
+            R.drawable.twab,
+            R.drawable.update,
+            R.drawable.twab,
+            R.drawable.hotfix,
+            R.drawable.twab,
+            R.drawable.twab,
+            R.drawable.hotfix
+    };
+
+    private String[] news_url = new String[]{
+            "https://www.bungie.net/7/en/News/article/destiny-2-hotfix-5-26-23",
+            "https://www.bungie.net/7/en/News/article/twab-may-25-2023",
+            "https://www.bungie.net/7/en/News/article/season-deep-update-7-1-0",
+            "https://www.bungie.net/7/en/News/article/this_week_at_bungie_05_18_23",
+            "https://www.bungie.net/7/en/News/article/hotfix7_0_5_3",
+            "https://www.bungie.net/7/en/News/article/05-011-2023-twab",
+            "https://www.bungie.net/7/en/News/article/destiny-2-g-games-23-twab",
+            "https://www.bungie.net/7/en/News/article/hotfix_7-0-5-2"
     };
 
     @Override
@@ -68,7 +81,7 @@ public class NewsFragment extends Fragment {
                 = new LinearLayoutManager(getActivity());
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
-        progAdapter = new NewsAdapter(getActivity(), news_pics, news_names);
+        progAdapter = new NewsAdapter(getActivity(), news_pics, news_names, news_url);
         recyclerView.setAdapter(progAdapter);
 
         ImageView back = getView().findViewById(R.id.imageView44);

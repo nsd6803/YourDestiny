@@ -29,23 +29,17 @@ public class GuidesFragment extends Fragment {
     RecyclerView.Adapter progAdapter;
 
     private String[] news_names = new String[] {
-            "Источник Кошмаров",
-            "Падение Короля",
-            "Клятва Послушника",
-            "Хранилище Стекла",
-            "Склеп Глубокого Камня",
-            "Сад Спасения",
-            "Последнее Желание"
+            "Хотфикс 26/05/23",
+            "TWAB 25/05/23",
+            "Обновление 7.1.0",
+            "TWAB 18/05/23"
     };
 
     private int[] news_pics = new int[]{
-            R.drawable.ron,
-            R.drawable.kf,
-            R.drawable.vod,
-            R.drawable.vog,
-            R.drawable.dsc,
-            R.drawable.gos,
-            R.drawable.lw
+            R.drawable.hotfix,
+            R.drawable.twab,
+            R.drawable.update,
+            R.drawable.twab
     };
 
     public View onCreateView(@NonNull LayoutInflater inflater,

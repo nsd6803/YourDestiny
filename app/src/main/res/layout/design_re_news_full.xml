@@ -8,8 +8,9 @@
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageView45"
-        android:layout_width="284dp"
-        android:layout_height="158dp"
+        android:layout_width="280dp"
+        android:layout_height="176dp"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.338"
