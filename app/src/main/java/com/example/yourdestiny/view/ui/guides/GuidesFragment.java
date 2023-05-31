@@ -19,11 +19,12 @@ import androidx.work.WorkManager;
 
 import com.example.yourdestiny.R;
 import com.example.yourdestiny.databinding.FragmentGuidesBinding;
+import com.example.yourdestiny.model.Repository;
 
 public class GuidesFragment extends Fragment {
     private GuidesViewModel guidesViewModel;
     private FragmentGuidesBinding binding;
-
+    Repository repository;
     RecyclerView recyclerView;
 
     RecyclerView.Adapter progAdapter;
@@ -56,7 +57,7 @@ public class GuidesFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
          TextView textView = getView().findViewById(R.id.title_1);
          textView.setText(R.string.title_guides);
-
+         repository = new Repository(getActivity().getApplicationContext());
         recyclerView = getView().findViewById(R.id.recyclerView2);
         LinearLayoutManager layoutManager
                 = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);

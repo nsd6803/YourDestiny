@@ -117,6 +117,9 @@
         <action
             android:id="@+id/action_navigation_game_activity_to_navigation_guides"
             app:destination="@id/navigation_guides" />
+        <action
+            android:id="@+id/action_navigation_game_activity_to_navigation_activity_card"
+            app:destination="@id/navigation_activity_card" />
     </fragment>
 
     <fragment
@@ -196,6 +199,16 @@
         <action
             android:id="@+id/action_navigation_api_to_navigation_profile"
             app:destination="@id/navigation_profile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_activity_card"
+        android:name="com.example.yourdestiny.view.ui.guides.ActivityCardFragment"
+        android:label="Карточка Активности"
+        tools:layout="@layout/fragment_activity_card" >
+        <action
+            android:id="@+id/action_navigation_activity_card_to_navigation_game_activity"
+            app:destination="@id/navigation_game_activity" />
     </fragment>
 
 </navigation>

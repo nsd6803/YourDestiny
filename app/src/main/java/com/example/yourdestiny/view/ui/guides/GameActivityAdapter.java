@@ -2,6 +2,7 @@ package com.example.yourdestiny.view.ui.guides;
 
 
 import android.content.Context;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.yourdestiny.R;
@@ -80,21 +82,16 @@ public class GameActivityAdapter extends RecyclerView.Adapter<GameActivityAdapte
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.title.setText(titles[position]);
         holder.image.setImageResource(images[position]);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle bundle = new Bundle();
+                bundle.putString("Name", holder.title.getText().toString());
+                Navigation.findNavController(v).navigate(R.id.action_navigation_game_activity_to_navigation_activity_card, bundle);
+            }
+        });
     }
 
-
-    //@Override
-    //public void onBindViewHolder(@NonNull com.example.yourdestiny.view.ui.guides.GameActivityFragment.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
-    //    holder.title.setText(titles[position]);
-    //    holder.itemView.setOnClickListener(new View.OnClickListener() {
-    //        @Override
-    //        public void onClick(View v) {
-    //            Bundle bundle = new Bundle();
-    //            bundle.putString("Name", holder.title.getText().toString());
-    //            Navigation.findNavController(v).navigate(R.id.action_navigation_triumph_to_navigation_triumph_item, bundle);
-    //        }
-    //    });
-    //}
 
     @Override
     public int getItemCount() {

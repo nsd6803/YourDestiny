@@ -20,7 +20,7 @@ import java.util.Objects;
 
 
 public class GameActivityFragment extends Fragment {
-
+    private  GameActivityViewModel gameActivityViewModel;
     private String CameFrom;
     RecyclerView recyclerView;
 
@@ -52,6 +52,7 @@ public class GameActivityFragment extends Fragment {
             "Дуальность",
             "Тиски Алчности",
             "Откровение",
+            "Яма Ереси",
             "Расколотый Трон"
     };
 
@@ -61,6 +62,7 @@ public class GameActivityFragment extends Fragment {
             R.drawable.d,
             R.drawable.goa,
             R.drawable.p,
+            R.drawable.poh,
             R.drawable.st
     };
 
@@ -86,6 +88,7 @@ public class GameActivityFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        gameActivityViewModel = new GameActivityViewModel(getActivity().getApplicationContext());
         recyclerView = getView().findViewById(R.id.game_activity);
         LinearLayoutManager layoutManager
                 = new LinearLayoutManager(getActivity());
@@ -108,6 +111,10 @@ public class GameActivityFragment extends Fragment {
                 Navigation.findNavController(arg).navigate(R.id.action_navigation_game_activity_to_navigation_guides);
             }
         });
+    }
+
+    public void fillDataBase(){
+
     }
 
 }
