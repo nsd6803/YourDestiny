@@ -12,8 +12,11 @@ public interface GuideDao {
     List<Guide> getAll();
 
 
-    @Query("SELECt COUNT(*) FROM Guide")
+    @Query("SELECT COUNT(*) FROM Guide")
     int getRowCount();
+
+    @Query("SELECT * FROM Guide WHERE name LIKE :name")
+    Guide getActivity(String name);
     @Insert
     void insertAll(Guide... users);
 }

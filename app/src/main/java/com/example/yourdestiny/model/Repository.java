@@ -23,6 +23,5 @@ public class Repository {
     public int check(){
         return db.guideDao().getRowCount();
     }
-
-
+    public Guide getInfo(String name){ return db.guideDao().getActivity(name);}
 }

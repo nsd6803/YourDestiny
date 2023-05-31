@@ -41,6 +41,30 @@ public class Guide {
         
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getPredicat() {
+        return predicat;
+    }
+
+    public String getDifficulty() {
+        return String.valueOf(difficulty);
+    }
+
+    public int getGuide_pic() {
+        return guide_pic;
+    }
+
+    public List<String> getEncounters() {
+        return encounters;
+    }
+
+    public List<String> getEncounters_descript() {
+        return encounters_descript;
+    }
+
     public Guide() {
     }
 }

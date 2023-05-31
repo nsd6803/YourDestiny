@@ -3,14 +3,12 @@ package com.example.yourdestiny.view.ui.guides;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.navigation.Navigation;
@@ -45,9 +43,6 @@ public class GameActivityAdapter extends RecyclerView.Adapter<GameActivityAdapte
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
-
-        private static final String TAG = "MyApp";
-
         ImageView image;
         TextView title;
         AdapterView.OnItemClickListener mItemClickListener;
@@ -56,16 +51,6 @@ public class GameActivityAdapter extends RecyclerView.Adapter<GameActivityAdapte
             super(itemView);
             image = itemView.findViewById(R.id.ga_img);
             title = itemView.findViewById(R.id.ga_title);
-
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    int pos = getAdapterPosition() + 1;
-                    Log.i(TAG, "Клик " + pos + " элемента");
-                    Toast.makeText(image.getContext(), "Клик " + pos + " элемента", Toast.LENGTH_SHORT).show();
-
-                }
-            });
         }
     }
 

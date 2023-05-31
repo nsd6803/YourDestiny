@@ -26,7 +26,7 @@ public class GameActivityFragment extends Fragment {
 
     RecyclerView.Adapter progAdapter;
 
-    private String[] raid_names = new String[] {
+    public String[] raid_names = new String[] {
             "Источник Кошмаров",
             "Падение Короля",
             "Клятва Послушника",
@@ -108,13 +108,11 @@ public class GameActivityFragment extends Fragment {
         returne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg) {
+
                 Navigation.findNavController(arg).navigate(R.id.action_navigation_game_activity_to_navigation_guides);
             }
         });
     }
 
-    public void fillDataBase(){
-
-    }
 
 }
