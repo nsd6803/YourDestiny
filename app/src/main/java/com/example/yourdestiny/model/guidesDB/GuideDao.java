@@ -1,4 +1,4 @@
-package com.example.yourdestiny.model;
+package com.example.yourdestiny.model.guidesDB;
 
 import androidx.room.Dao;
 import androidx.room.Insert;

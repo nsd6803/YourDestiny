@@ -1,4 +1,4 @@
-package com.example.yourdestiny.model;
+package com.example.yourdestiny.model.guidesDB;
 
 import com.example.yourdestiny.R;
 

@@ -15,10 +15,11 @@ import androidx.navigation.Navigation;
 
 import com.example.yourdestiny.R;
 import com.example.yourdestiny.databinding.FragmentCollectionBinding;
+import com.example.yourdestiny.model.Repository;
 
 public class CollectionFragment extends Fragment {
     private FragmentCollectionBinding binding;
-
+    Repository repository;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         CollectionViewModel collectionViewModel =
@@ -35,7 +36,7 @@ public class CollectionFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         TextView textView = getView().findViewById(R.id.title_3);
         textView.setText(R.string.title_collection);
-
+        repository = new Repository(getActivity().getApplicationContext());
         ImageView weapons = getView().findViewById(R.id.imageView9);
         weapons.setOnClickListener(new View.OnClickListener() {
             @Override

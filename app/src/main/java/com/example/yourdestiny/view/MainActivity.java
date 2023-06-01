@@ -17,10 +17,11 @@ import androidx.core.app.ActivityCompat;
 import com.example.yourdestiny.R;
 
 public class MainActivity extends AppCompatActivity {
-
+    MainActivityViewModel mainActivityViewModel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mainActivityViewModel = new MainActivityViewModel(getApplicationContext());
         SharedPreferences prefs = getPreferences(MODE_PRIVATE);
         if (prefs.getBoolean("isFirstRun", true)) {
             Intent myIntent = new Intent(MainActivity.this, OnBoarding.class);

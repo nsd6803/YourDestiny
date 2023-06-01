@@ -5,7 +5,7 @@ import android.util.Log;
 
 import androidx.lifecycle.ViewModel;
 
-import com.example.yourdestiny.model.Guide;
+import com.example.yourdestiny.model.guidesDB.Guide;
 import com.example.yourdestiny.model.Repository;
 
 public class ActivityCardViewModel extends ViewModel {
