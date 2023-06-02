@@ -50,5 +50,5 @@ public class Repository {
 
     public Guide getInfo(String name){ return db.guideDao().getActivity(name);}
 
-    public Weapon getInfo_w(String name){ return db_W.weaponDao().getActivity(name);}
+    public Weapon getInfo_w(String name){ return db_W.weaponDao().getWeapon(name);}
 }

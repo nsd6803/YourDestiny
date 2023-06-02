@@ -46,7 +46,20 @@ public class Weapon {
     @ColumnInfo(name = "exotic_descrypt")
     public String exotic_descrypt;
 
-    public Weapon(String name, String type, String element, int pic, int back_pic, String predicat, String[] stats, String rare, int exotic_pic, String exotic_title, String exotic_descrypt) {
+    @ColumnInfo(name = "lore")
+    public String lore;
+
+    @ColumnInfo(name = "for_class")
+    public String for_class;
+
+    @ColumnInfo(name = "for_subclass")
+    public String for_subclass;
+
+    @ColumnInfo(name = "for_activity")
+    public String for_activity;
+
+    public Weapon(String name, String type, String element, int pic, int back_pic, String predicat, String[] stats, String rare,
+                  int exotic_pic, String exotic_title, String exotic_descrypt, String lore, String for_class, String for_subclass, String for_activity) {
         this.name = name;
         this.type = type;
         this.element = element;
@@ -58,11 +71,30 @@ public class Weapon {
         this.exotic_pic = exotic_pic;
         this.exotic_title = exotic_title;
         this.exotic_descrypt = exotic_descrypt;
+        this.lore = lore;
+        this.for_class = for_class;
+        this.for_subclass = for_subclass;
+        this.for_activity = for_activity;
     }
 
     public Weapon() {
     }
 
+    public String getLore(){
+        return lore;
+    }
+
+    public String getClas(){
+        return for_class;
+    }
+
+    public String getSubclass(){
+        return for_subclass;
+    }
+
+    public String getActivity(){
+        return for_activity;
+    }
 
     public String getName() {
         return name;

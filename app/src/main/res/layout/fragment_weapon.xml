@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.ui.collection.WeaponFragment"
+    tools:context=".view.ui.collection.Weapon.WeaponFragment"
     android:background="@color/black">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -71,6 +71,7 @@
             app:layout_constraintVertical_bias="0.012" />
 
         <View
+            android:id="@+id/view4"
             android:layout_width="320dp"
             android:layout_height="1dp"
             android:background="@android:color/white"
@@ -79,5 +80,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/title_12"
             app:layout_constraintVertical_bias="0.014" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Weapons"
+            android:layout_width="match_parent"
+            android:layout_height="565dp"
+            android:layout_marginTop="29dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_11"
+            app:layout_constraintVertical_bias="0.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

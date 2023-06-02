@@ -1,4 +1,4 @@
-package com.example.yourdestiny.view.ui.guides;
+package com.example.yourdestiny.view.ui.guides.ActivityCard;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -61,7 +61,7 @@ public class ActivityCardAdapter extends RecyclerView.Adapter<ActivityCardAdapte
     public ActivityCardAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.design_activity_card, parent, false);
-        com.example.yourdestiny.view.ui.guides.ActivityCardAdapter.ViewHolder viewHolder = new com.example.yourdestiny.view.ui.guides.ActivityCardAdapter.ViewHolder(view);
+        ActivityCardAdapter.ViewHolder viewHolder = new ActivityCardAdapter.ViewHolder(view);
         return viewHolder;
     }
 

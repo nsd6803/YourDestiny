@@ -1,4 +1,4 @@
-package com.example.yourdestiny.view.ui.guides;
+package com.example.yourdestiny.view.ui.guides.ActivityCard;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.yourdestiny.R;
+import com.example.yourdestiny.view.ui.guides.GameActivityFragment;
 
 import java.util.Arrays;
 

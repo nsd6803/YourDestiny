@@ -69,23 +69,32 @@
 
     <fragment
         android:id="@+id/navigation_weapon"
-        android:name="com.example.yourdestiny.view.ui.collection.WeaponFragment"
+        android:name="com.example.yourdestiny.view.ui.collection.Weapon.WeaponFragment"
         android:label="Оружие"
         tools:layout="@layout/fragment_weapon" >
 
         <action
             android:id="@+id/action_navigation_weapon_to_navigation_collection"
             app:destination="@id/navigation_collection" />
+        <action
+            android:id="@+id/action_navigation_weapon_to_navigation_legendary"
+            app:destination="@id/navigation_legendary" />
+        <action
+            android:id="@+id/action_navigation_weapon_to_navigation_exotic"
+            app:destination="@id/navigation_exotic" />
     </fragment>
 
     <fragment
         android:id="@+id/navigation_armor"
-        android:name="com.example.yourdestiny.view.ui.collection.ArmorFragment"
+        android:name="com.example.yourdestiny.view.ui.collection.Armor.ArmorFragment"
         android:label="Броня"
         tools:layout="@layout/fragment_armor" >
         <action
             android:id="@+id/action_navigation_armor_to_navigation_collection"
             app:destination="@id/navigation_collection" />
+        <action
+            android:id="@+id/action_navigation_armor_to_navigation_armor_item"
+            app:destination="@id/navigation_armor_item" />
     </fragment>
     <fragment
         android:id="@+id/navigation_new"
@@ -95,6 +104,15 @@
         <action
             android:id="@+id/action_navigation_new_to_navigation_collection"
             app:destination="@id/navigation_collection" />
+        <action
+            android:id="@+id/action_navigation_new_to_navigation_armor_item"
+            app:destination="@id/navigation_armor_item" />
+        <action
+            android:id="@+id/action_navigation_new_to_navigation_exotic"
+            app:destination="@id/navigation_exotic" />
+        <action
+            android:id="@+id/action_navigation_new_to_navigation_legendary"
+            app:destination="@id/navigation_legendary" />
     </fragment>
 
     <fragment
@@ -175,6 +193,12 @@
         <action
             android:id="@+id/action_navigation_result_to_navigation_buildcraft"
             app:destination="@id/navigation_buildcraft" />
+        <action
+            android:id="@+id/action_navigation_result_to_navigation_exotic"
+            app:destination="@id/navigation_exotic" />
+        <action
+            android:id="@+id/action_navigation_result_to_navigation_armor_item"
+            app:destination="@id/navigation_armor_item" />
     </fragment>
 
     <fragment
@@ -203,12 +227,58 @@
 
     <fragment
         android:id="@+id/navigation_activity_card"
-        android:name="com.example.yourdestiny.view.ui.guides.ActivityCardFragment"
+        android:name="com.example.yourdestiny.view.ui.guides.ActivityCard.ActivityCardFragment"
         android:label="Карточка Активности"
         tools:layout="@layout/fragment_activity_card" >
         <action
             android:id="@+id/action_navigation_activity_card_to_navigation_game_activity"
             app:destination="@id/navigation_game_activity" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_legendary"
+        android:name="com.example.yourdestiny.view.ui.collection.Weapon.WeaponLFragment"
+        android:label="Легендарное"
+        tools:layout="@layout/fragment_weapon_l" >
+        <action
+            android:id="@+id/action_navigation_legendary_to_navigation_weapon"
+            app:destination="@id/navigation_weapon" />
+        <action
+            android:id="@+id/action_navigation_legendary_to_navigation_new"
+            app:destination="@id/navigation_new" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_exotic"
+        android:name="com.example.yourdestiny.view.ui.collection.Weapon.WeaponEFragment"
+        android:label="Экзотическое"
+        tools:layout="@layout/fragment_weapon_e" >
+        <action
+            android:id="@+id/action_navigation_exotic_to_navigation_result"
+            app:destination="@id/navigation_result" />
+        <action
+            android:id="@+id/action_navigation_exotic_to_navigation_weapon"
+            app:destination="@id/navigation_weapon" />
+        <action
+            android:id="@+id/action_navigation_exotic_to_navigation_new"
+            app:destination="@id/navigation_new" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_armor_item"
+        android:name="com.example.yourdestiny.view.ui.collection.Armor.ArmorItemFragment"
+        android:label="Броня_Элемент"
+        tools:layout="@layout/fragment_armor_item" >
+        <action
+            android:id="@+id/action_navigation_armor_item_to_navigation_result"
+            app:destination="@id/navigation_result" />
+        <action
+            android:id="@+id/action_navigation_armor_item_to_navigation_armor"
+            app:destination="@id/navigation_armor" />
+        <action
+            android:id="@+id/action_navigation_armor_item_to_navigation_new"
+            app:destination="@id/navigation_new" />
     </fragment>
 
 </navigation>

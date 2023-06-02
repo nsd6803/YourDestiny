@@ -16,10 +16,16 @@ public interface WeaponDao {
     int getRowCount();
 
     @Query("SELECT * FROM Weapon WHERE name LIKE :name")
-    Weapon getActivity(String name);
+    Weapon getWeapon(String name);
 
     @Query("SELECT rare FROM Weapon WHERE name LIKE :name")
     String isExotic(String name);
+
+    @Query("SELECT * FROM Weapon WHERE rare LIKE 'Экзотическое'")
+    List<Weapon> getExotic();
+
+    @Query("SELECT * FROM Weapon WHERE name LIKE 'Легендарное'")
+    List<Weapon> getLegendary();
 
     @Insert
     void insertAll(Weapon... users);

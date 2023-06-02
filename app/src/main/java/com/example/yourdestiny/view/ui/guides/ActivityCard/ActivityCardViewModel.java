@@ -1,4 +1,4 @@
-package com.example.yourdestiny.view.ui.guides;
+package com.example.yourdestiny.view.ui.guides.ActivityCard;
 
 import android.content.Context;
 import android.util.Log;

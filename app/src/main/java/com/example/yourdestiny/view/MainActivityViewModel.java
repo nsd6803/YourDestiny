@@ -43,7 +43,12 @@ public class MainActivityViewModel {
                         repository.weaponInfo.getRare(i),
                         repository.weaponInfo.getExotic_pic(i),
                         repository.weaponInfo.getExotic_title(i),
-                        repository.weaponInfo.getExotic_descrypt(i)
+                        repository.weaponInfo.getExotic_descrypt(i),
+                        repository.weaponInfo.getLore(i),
+                        repository.weaponInfo.getClas(i),
+                        repository.weaponInfo.getSubclas(i),
+                        repository.weaponInfo.getActivityy(i)
+
                 );
                 repository.weaponDao.insertAll(weapon);
             }
