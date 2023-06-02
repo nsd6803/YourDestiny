@@ -3,6 +3,7 @@ package com.example.yourdestiny.view;
 import android.content.Context;
 
 import com.example.yourdestiny.model.Repository;
+import com.example.yourdestiny.model.armorDB.Armor;
 import com.example.yourdestiny.model.guidesDB.Guide;
 import com.example.yourdestiny.model.weaponDB.Weapon;
 
@@ -51,6 +52,29 @@ public class MainActivityViewModel {
 
                 );
                 repository.weaponDao.insertAll(weapon);
+            }
+
+        }
+
+        if(repository.check_a() == 0){
+            for (int i= 0; i < repository.armorInfo.getName().length; i++){
+                Armor armor = new Armor(
+                        repository.armorInfo.getName(i),
+                        repository.armorInfo.getType(i),
+                        repository.armorInfo.getPic(i),
+                        repository.armorInfo.getPic_back(i),
+                        repository.armorInfo.getPredicat(i),
+                        repository.armorInfo.getExotic_pic(i),
+                        repository.armorInfo.getExotic_title(i),
+                        repository.armorInfo.getExotic_descrypt(i),
+                        repository.armorInfo.getLore(i),
+                        repository.armorInfo.getClas(i),
+                        repository.armorInfo.getSubclas(i),
+                        repository.armorInfo.getActivityy(i),
+                        repository.armorInfo.getNeww(i)
+
+                );
+                repository.armorDao.insertAll(armor);
             }
 
         }
