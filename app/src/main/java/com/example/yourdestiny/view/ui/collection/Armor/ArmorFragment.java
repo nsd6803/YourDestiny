@@ -12,11 +12,17 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.yourdestiny.R;
 
 
 public class ArmorFragment extends Fragment {
+
+    ArmorViewModel armorViewModel;
+    RecyclerView recyclerView;
+    RecyclerView.Adapter progAdapter;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -37,6 +43,7 @@ public class ArmorFragment extends Fragment {
         TextView textView = getView().findViewById(R.id.title_6);
         textView.setText("Снаряжение");
         ImageView returne = getView().findViewById(R.id.imageView32);
+        armorViewModel = new ArmorViewModel(getActivity().getApplicationContext());
         returne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg) {
@@ -53,12 +60,28 @@ public class ArmorFragment extends Fragment {
         titan.setTextColor(getResources().getColor(R.color.grey));
         warlock.setTextColor(getResources().getColor(R.color.grey));
 
+        recyclerView = getView().findViewById(R.id.Armors);
+        LinearLayoutManager layoutManager
+                = new LinearLayoutManager(getActivity());
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(layoutManager);
+        progAdapter = new ArmorAdapter(getActivity(), armorViewModel.getHunter());
+        recyclerView.setAdapter(progAdapter);
+
         hunter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 hunter.setTextColor(getResources().getColor(R.color.white));
                 titan.setTextColor(getResources().getColor(R.color.grey));
                 warlock.setTextColor(getResources().getColor(R.color.grey));
+
+                recyclerView = getView().findViewById(R.id.Armors);
+                LinearLayoutManager layoutManager
+                        = new LinearLayoutManager(getActivity());
+                recyclerView.setHasFixedSize(true);
+                recyclerView.setLayoutManager(layoutManager);
+                progAdapter = new ArmorAdapter(getActivity(), armorViewModel.getHunter());
+                recyclerView.setAdapter(progAdapter);
             }
         });
 
@@ -68,6 +91,14 @@ public class ArmorFragment extends Fragment {
                 hunter.setTextColor(getResources().getColor(R.color.grey));
                 titan.setTextColor(getResources().getColor(R.color.white));
                 warlock.setTextColor(getResources().getColor(R.color.grey));
+
+                recyclerView = getView().findViewById(R.id.Armors);
+                LinearLayoutManager layoutManager
+                        = new LinearLayoutManager(getActivity());
+                recyclerView.setHasFixedSize(true);
+                recyclerView.setLayoutManager(layoutManager);
+                progAdapter = new ArmorAdapter(getActivity(), armorViewModel.getTitan());
+                recyclerView.setAdapter(progAdapter);
             }
         });
 
@@ -77,6 +108,14 @@ public class ArmorFragment extends Fragment {
                 hunter.setTextColor(getResources().getColor(R.color.grey));
                 titan.setTextColor(getResources().getColor(R.color.grey));
                 warlock.setTextColor(getResources().getColor(R.color.white));
+
+                recyclerView = getView().findViewById(R.id.Armors);
+                LinearLayoutManager layoutManager
+                        = new LinearLayoutManager(getActivity());
+                recyclerView.setHasFixedSize(true);
+                recyclerView.setLayoutManager(layoutManager);
+                progAdapter = new ArmorAdapter(getActivity(), armorViewModel.getWarlock());
+                recyclerView.setAdapter(progAdapter);
             }
         });
     }

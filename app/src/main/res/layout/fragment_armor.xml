@@ -87,6 +87,7 @@
             app:layout_constraintVertical_bias="0.012" />
 
         <View
+            android:id="@+id/view6"
             android:layout_width="320dp"
             android:layout_height="1dp"
             android:background="@android:color/white"
@@ -95,5 +96,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/title_12"
             app:layout_constraintVertical_bias="0.014" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Armors"
+            android:layout_width="match_parent"
+            android:layout_height="565dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_11"
+            app:layout_constraintVertical_bias="0.337" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
