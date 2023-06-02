@@ -25,7 +25,10 @@ public class TriumphAdapter extends RecyclerView.Adapter<TriumphAdapter.ViewHold
     String[] titles;
     int[] images;
 
+
     private AdapterView.OnItemClickListener onItemClickListener;
+
+
 
     public void setOnItemClickListener(AdapterView.OnItemClickListener listener) {
         this.onItemClickListener = listener;

@@ -3,7 +3,6 @@ package com.example.yourdestiny.model.triumphDB;
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
-import androidx.room.Update;
 
 import java.util.List;
 
@@ -19,8 +18,8 @@ public interface TriumphDao {
     @Query("SELECT * FROM Triumph WHERE name LIKE :name")
     Triumph getTriumph(String name);
 
-    @Update
-    void UpdateTriumph(Triumph triumph);
+    @Query("UPDATE Triumph set isChecked = :triumph WHERE name LIKE :name")
+    void UpdateTriumph(List<String> triumph, String name);
 
     @Insert
     void insertAll(Triumph... users);

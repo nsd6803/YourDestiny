@@ -85,6 +85,7 @@ public class MainActivityViewModel {
             for (int i= 0; i < repository.triumphInfo.getNames().length; i++){
                 Triumph triumph = new Triumph(
                         repository.triumphInfo.getNames(i),
+                        repository.triumphInfo.getTitles(i),
                         repository.triumphInfo.getDesctuptions(i),
                         repository.triumphInfo.getIsChecked(i)
 

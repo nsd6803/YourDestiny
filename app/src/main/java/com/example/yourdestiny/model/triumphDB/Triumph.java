@@ -15,6 +15,10 @@ public class Triumph {
     @ColumnInfo(name = "name")
     public String name;
 
+
+    @ColumnInfo(name = "title")
+    public List<String> title;
+
     @ColumnInfo(name = "description")
     public List<String> description;
 
@@ -23,14 +27,18 @@ public class Triumph {
 
 
 
-    public Triumph(String names, String[] description, String[] isChecked) {
+    public Triumph(String names, String[] title, String[] description, String[] isChecked) {
         this.name = names;
+        this.title = Arrays.asList(title);
         this.description = Arrays.asList(description);
         this.isChecked = Arrays.asList(isChecked);
     }
 
     public String getName() {
         return name;
+    }
+    public List<String> getTitle() {
+        return title;
     }
 
     public List<String> getDescription() {
@@ -40,7 +48,6 @@ public class Triumph {
     public List<String> getIsChecked() {
         return isChecked;
     }
-
 
 
     public Triumph() {
