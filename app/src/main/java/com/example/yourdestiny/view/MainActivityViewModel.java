@@ -5,6 +5,7 @@ import android.content.Context;
 import com.example.yourdestiny.model.Repository;
 import com.example.yourdestiny.model.armorDB.Armor;
 import com.example.yourdestiny.model.guidesDB.Guide;
+import com.example.yourdestiny.model.triumphDB.Triumph;
 import com.example.yourdestiny.model.weaponDB.Weapon;
 
 public class MainActivityViewModel {
@@ -48,7 +49,8 @@ public class MainActivityViewModel {
                         repository.weaponInfo.getLore(i),
                         repository.weaponInfo.getClas(i),
                         repository.weaponInfo.getSubclas(i),
-                        repository.weaponInfo.getActivityy(i)
+                        repository.weaponInfo.getActivityy(i),
+                        repository.weaponInfo.getNeww(i)
 
                 );
                 repository.weaponDao.insertAll(weapon);
@@ -75,6 +77,19 @@ public class MainActivityViewModel {
 
                 );
                 repository.armorDao.insertAll(armor);
+            }
+
+        }
+
+        if(repository.check_t() == 0){
+            for (int i= 0; i < repository.triumphInfo.getNames().length; i++){
+                Triumph triumph = new Triumph(
+                        repository.triumphInfo.getNames(i),
+                        repository.triumphInfo.getDesctuptions(i),
+                        repository.triumphInfo.getIsChecked(i)
+
+                );
+                repository.triumphDao.insertAll(triumph);
             }
 
         }

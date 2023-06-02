@@ -98,7 +98,7 @@
     </fragment>
     <fragment
         android:id="@+id/navigation_new"
-        android:name="com.example.yourdestiny.view.ui.collection.NewFragment"
+        android:name="com.example.yourdestiny.view.ui.collection.New.NewFragment"
         android:label="Новое"
         tools:layout="@layout/fragment_new" >
         <action

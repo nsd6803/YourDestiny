@@ -23,7 +23,7 @@ public class WeaponFragment extends Fragment {
 
     RecyclerView.Adapter progAdapter;
 
-
+    String came_from;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,7 +61,7 @@ public class WeaponFragment extends Fragment {
                 = new LinearLayoutManager(getActivity());
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
-        progAdapter = new WeaponAdapter(getActivity(), weaponViewModel.getLegenadry());
+        progAdapter = new WeaponAdapter(getActivity(), weaponViewModel.getLegenadry(), "no");
         recyclerView.setAdapter(progAdapter);
 
         legendary.setOnClickListener(new View.OnClickListener() {
@@ -74,7 +74,7 @@ public class WeaponFragment extends Fragment {
                         = new LinearLayoutManager(getActivity());
                 recyclerView.setHasFixedSize(true);
                 recyclerView.setLayoutManager(layoutManager);
-                progAdapter = new WeaponAdapter(getActivity(), weaponViewModel.getLegenadry());
+                progAdapter = new WeaponAdapter(getActivity(), weaponViewModel.getLegenadry(), "no");
                 recyclerView.setAdapter(progAdapter);
             }
         });
@@ -89,7 +89,7 @@ public class WeaponFragment extends Fragment {
                         = new LinearLayoutManager(getActivity());
                 recyclerView.setHasFixedSize(true);
                 recyclerView.setLayoutManager(layoutManager);
-                progAdapter = new WeaponAdapter(getActivity(), weaponViewModel.getExotic());
+                progAdapter = new WeaponAdapter(getActivity(), weaponViewModel.getExotic(), "no");
                 recyclerView.setAdapter(progAdapter);
             }
         });

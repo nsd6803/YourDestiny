@@ -22,6 +22,7 @@ public class WeaponLFragment extends Fragment {
 
     Weapon weapon_info;
 
+    String came_from;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -29,7 +30,9 @@ public class WeaponLFragment extends Fragment {
         Bundle bundle = getArguments();
         if (bundle != null) {
             String value1 = bundle.getString("Name");
+            String from = bundle.getString("from");
             CameFrom = value1;
+            came_from = from;
         }
     }
 
@@ -105,7 +108,12 @@ public class WeaponLFragment extends Fragment {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_navigation_legendary_to_navigation_weapon);
+                if (came_from == "yes"){
+                    Navigation.findNavController(view).navigate(R.id.action_navigation_legendary_to_navigation_new);
+                }
+                else{
+                    Navigation.findNavController(view).navigate(R.id.action_navigation_legendary_to_navigation_weapon);
+                }
             }
         });
 

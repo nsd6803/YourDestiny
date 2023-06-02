@@ -31,6 +31,7 @@ public class Guide {
     @ColumnInfo(name = "encounters_descript")
     public List<String> encounters_descript;
 
+
     public Guide(String names, String predicat, int difficult, int guide_pic, String[] encounters, String[] encounters_descript) {
         this.name = names;
         this.predicat = predicat;
@@ -38,7 +39,7 @@ public class Guide {
         this.guide_pic = guide_pic;
         this.encounters = Arrays.asList(encounters);
         this.encounters_descript = Arrays.asList(encounters_descript);
-        
+
     }
 
     public String getName() {

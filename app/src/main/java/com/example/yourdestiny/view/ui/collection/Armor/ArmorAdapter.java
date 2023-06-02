@@ -27,14 +27,14 @@ public class ArmorAdapter  extends RecyclerView.Adapter<ArmorAdapter.ViewHolder>
     List<String> types;
     List<Integer> pic;
 
-
+    String from_new;
     private AdapterView.OnItemClickListener onItemClickListener;
 
     public void setOnItemClickListener(AdapterView.OnItemClickListener listener) {
         this.onItemClickListener = listener;
     }
 
-    public ArmorAdapter(Context context, List<Armor> weapons) {
+    public ArmorAdapter(Context context, List<Armor> weapons, String from_new) {
         this.context = context;
         this.armors = weapons;
         this.titles = Arrays.asList(new String[weapons.size()]);
@@ -45,6 +45,7 @@ public class ArmorAdapter  extends RecyclerView.Adapter<ArmorAdapter.ViewHolder>
             this.types.set(i, weapons.get(i).getType());
             this.pic.set(i, weapons.get(i).getPic());
         }
+        this.from_new = from_new;
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -82,7 +83,13 @@ public class ArmorAdapter  extends RecyclerView.Adapter<ArmorAdapter.ViewHolder>
             public void onClick(View v) {
                 Bundle bundle = new Bundle();
                 bundle.putString("Name", holder.title.getText().toString());
-                Navigation.findNavController(v).navigate(R.id.action_navigation_armor_to_navigation_armor_item, bundle);
+                bundle.putString("from", from_new);
+                if (from_new == "yes") {
+                    Navigation.findNavController(v).navigate(R.id.action_navigation_new_to_navigation_armor_item, bundle);
+                }
+                else{
+                    Navigation.findNavController(v).navigate(R.id.action_navigation_armor_to_navigation_armor_item, bundle);
+                }
             }
         });
     }

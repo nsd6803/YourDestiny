@@ -509,6 +509,18 @@ public class WeaponInfo {
             "Экзотическое","Экзотическое",
             "Экзотическое","Экзотическое"};
 
+    private String[] Neww = {"","Новое",
+            "","",
+            "","",
+            "","",
+            "Новое","Новое",
+
+            "Новое","Новое",
+            "Новое","",
+            "Новое","",
+            "","",
+            "",""};
+
     public String getLore(int count){
         return Lore[count];
     }
@@ -527,6 +539,8 @@ public class WeaponInfo {
     public String getType(int count) {
         return Type[count];
     }
+
+    public String getNeww(int count){return Neww[count];}
 
     public String getElement(int count) {
         return Element[count];

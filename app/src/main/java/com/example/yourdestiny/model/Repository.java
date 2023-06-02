@@ -12,6 +12,10 @@ import com.example.yourdestiny.model.guidesDB.Guide;
 import com.example.yourdestiny.model.guidesDB.GuideDao;
 import com.example.yourdestiny.model.guidesDB.GuidesDatabase;
 import com.example.yourdestiny.model.guidesDB.GuidesInfo;
+import com.example.yourdestiny.model.triumphDB.Triumph;
+import com.example.yourdestiny.model.triumphDB.TriumphDao;
+import com.example.yourdestiny.model.triumphDB.TriumphDatabase;
+import com.example.yourdestiny.model.triumphDB.TriumphInfo;
 import com.example.yourdestiny.model.weaponDB.Weapon;
 import com.example.yourdestiny.model.weaponDB.WeaponDao;
 import com.example.yourdestiny.model.weaponDB.WeaponDatabase;
@@ -35,6 +39,11 @@ public class Repository {
     public ArmorDao armorDao = null;
     public List<Armor> armors = null;
 
+    public TriumphInfo triumphInfo;
+    public TriumphDatabase db_T = null;
+    public TriumphDao triumphDao = null;
+    public List<Triumph> triumphs = null;
+
     public Repository(Context context) {
         db = Room.databaseBuilder(context.getApplicationContext(),
                 GuidesDatabase.class, "Guides").allowMainThreadQueries().build();
@@ -53,6 +62,13 @@ public class Repository {
         armorDao = db_A.armorDao();
         armors = db_A.armorDao().getAll();
         armorInfo = new ArmorInfo();
+
+
+        db_T = Room.databaseBuilder(context.getApplicationContext(),
+                TriumphDatabase.class, "Triumph").allowMainThreadQueries().build();
+        triumphDao = db_T.triumphDao();
+        triumphs = db_T.triumphDao().getAll();
+        triumphInfo = new TriumphInfo();
     }
 
     public int check(){
@@ -72,4 +88,10 @@ public class Repository {
     }
 
     public Armor getInfo_a(String name){ return db_A.armorDao().getArmor(name);}
+
+    public int check_t(){
+        return db_T.triumphDao().getRowCount();
+    }
+
+    public Triumph getInfo_t(String name){ return db_T.triumphDao().getTriumph(name);}
 }

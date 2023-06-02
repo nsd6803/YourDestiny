@@ -27,6 +27,8 @@ public interface WeaponDao {
     @Query("SELECT * FROM Weapon WHERE rare LIKE 'Легендарное'")
     List<Weapon> getLegendary();
 
+    @Query("SELECT * FROM Weapon WHERE neww LIKE 'Новое'")
+    List<Weapon> getNeww();
     @Insert
     void insertAll(Weapon... users);
 }

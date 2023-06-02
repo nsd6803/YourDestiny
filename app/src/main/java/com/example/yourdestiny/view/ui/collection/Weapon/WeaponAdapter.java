@@ -30,6 +30,7 @@ public class WeaponAdapter extends RecyclerView.Adapter<WeaponAdapter.ViewHolder
     List<Integer> pic;
     List<String> rare;
 
+    String from_new;
 
 
     private AdapterView.OnItemClickListener onItemClickListener;
@@ -38,7 +39,7 @@ public class WeaponAdapter extends RecyclerView.Adapter<WeaponAdapter.ViewHolder
         this.onItemClickListener = listener;
     }
 
-    public WeaponAdapter (Context context, List<Weapon> weapons){
+    public WeaponAdapter (Context context, List<Weapon> weapons, String from_new){
         this.context = context;
         this.weapons = weapons;
         this.titles = Arrays.asList(new String[weapons.size()]);
@@ -53,6 +54,7 @@ public class WeaponAdapter extends RecyclerView.Adapter<WeaponAdapter.ViewHolder
             this.pic.set(i, weapons.get(i).getPic());
             this.rare.set(i, weapons.get(i).getRare());
         }
+        this.from_new = from_new;
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
@@ -92,11 +94,20 @@ public class WeaponAdapter extends RecyclerView.Adapter<WeaponAdapter.ViewHolder
             public void onClick(View v) {
                 Bundle bundle = new Bundle();
                 bundle.putString("Name", holder.title.getText().toString());
-                if (Objects.equals(rare.get(position), "Экзотическое")) {
-                    Navigation.findNavController(v).navigate(R.id.action_navigation_weapon_to_navigation_exotic, bundle);
+                bundle.putString("from", from_new);
+                if(from_new == "yes") {
+                    if (Objects.equals(rare.get(position), "Экзотическое")) {
+                        Navigation.findNavController(v).navigate(R.id.action_navigation_new_to_navigation_exotic, bundle);
+                    } else {
+                        Navigation.findNavController(v).navigate(R.id.action_navigation_new_to_navigation_legendary, bundle);
+                    }
                 }
                 else{
-                    Navigation.findNavController(v).navigate(R.id.action_navigation_weapon_to_navigation_legendary, bundle);
+                    if (Objects.equals(rare.get(position), "Экзотическое")) {
+                        Navigation.findNavController(v).navigate(R.id.action_navigation_weapon_to_navigation_exotic, bundle);
+                    } else {
+                        Navigation.findNavController(v).navigate(R.id.action_navigation_weapon_to_navigation_legendary, bundle);
+                    }
                 }
             }
         });
