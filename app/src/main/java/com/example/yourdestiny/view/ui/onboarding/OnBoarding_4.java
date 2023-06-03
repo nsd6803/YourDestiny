@@ -78,6 +78,7 @@ public class OnBoarding_4 extends Fragment {
             public void onClick(View arg) {
                 Intent intent = new Intent(getActivity(), MainActivity.class);
                 getActivity().startActivity(intent);
+                getActivity().finish();
             }
 
         });

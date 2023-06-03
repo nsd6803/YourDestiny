@@ -32,28 +32,34 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.398"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintVertical_bias="0.542" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="50dp"
         android:layout_height="23dp"
-        android:layout_marginBottom="172dp"
+        android:layout_marginBottom="188dp"
         android:text="Войти"
         android:textColor="@color/red"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView" />
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/editTextTextPersonName3"
         android:layout_width="265dp"
         android:layout_height="64dp"
         android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/white"
         android:ems="10"
         android:hint="Почта"
         android:inputType="textPersonName"
+        android:textColor="@color/white"
         android:textColorHint="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName4"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,10 +70,14 @@
         android:layout_width="265dp"
         android:layout_height="64dp"
         android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/white"
         android:ems="10"
         android:hint="Пароль"
         android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/white"
         android:textColorHint="@color/white"
+        android:textColorLink="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -77,9 +87,11 @@
         android:layout_width="265dp"
         android:layout_height="64dp"
         android:layout_marginBottom="312dp"
+        android:backgroundTint="@color/white"
         android:ems="10"
         android:hint="Подтвердите пароль"
         android:inputType="textPersonName"
+        android:textColor="@color/white"
         android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -90,16 +102,17 @@
         android:layout_width="265dp"
         android:layout_height="64dp"
         android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/white"
         android:ems="10"
         android:hint="Ник"
         android:inputType="textPersonName"
+        android:textColor="@color/white"
         android:textColorHint="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        app:cornerRadius="56dp"
         android:id="@+id/button2"
         android:layout_width="183dp"
         android:layout_height="55dp"
@@ -109,11 +122,12 @@
         android:textColorHighlight="@color/white"
         android:textColorHint="@color/white"
         android:textColorLink="@color/white"
+        app:cornerRadius="56dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.674" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5"
+        app:layout_constraintVertical_bias="0.105" />
 
     <ImageView
         android:id="@+id/imageView3"
