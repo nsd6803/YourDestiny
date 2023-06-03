@@ -5,23 +5,36 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import com.example.yourdestiny.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
     MainActivityViewModel mainActivityViewModel;
+    FirebaseAuth mAuth;
+    EditText nickname;
+    EditText passwrd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mainActivityViewModel = new MainActivityViewModel(getApplicationContext());
+
         SharedPreferences prefs = getPreferences(MODE_PRIVATE);
         if (prefs.getBoolean("isFirstRun", true)) {
             Intent myIntent = new Intent(MainActivity.this, OnBoarding.class);
@@ -46,6 +59,10 @@ public class MainActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         );
 
+        mAuth = FirebaseAuth.getInstance();
+        nickname = findViewById(R.id.editTextTextPersonName);
+        passwrd = findViewById(R.id.editTextTextPassword);
+
         TextView registr = findViewById(R.id.textView5);
         registr.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,10 +84,35 @@ public class MainActivity extends AppCompatActivity {
         Button button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
                 @Override
-                        public void onClick(View arg) {
-                        Intent intent = new Intent(arg.getContext(), AppActivity.class);
-                        arg.getContext().startActivity(intent);
+                public void onClick(View arg) {
+                    String nickname_ = nickname.getText().toString();
+                    String pass_ = passwrd.getText().toString();
+                    Log.d("PASSWORD", pass_);
+                    if(TextUtils.isEmpty(nickname_)){
+                        Toast.makeText(MainActivity.this, "Введите имя", Toast.LENGTH_SHORT).show();
+                        return;
                     }
+                    if(TextUtils.isEmpty(pass_)){
+                        Toast.makeText(MainActivity.this, "Введите пароль", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    mAuth.signInWithEmailAndPassword(nickname_, pass_)
+                            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                Intent intent = new Intent(arg.getContext(), AppActivity.class);
+                                arg.getContext().startActivity(intent);
+                                finish();
+                            } else {
+
+                                Toast.makeText(MainActivity.this, "Ошибка",
+                                        Toast.LENGTH_SHORT).show();
+
+                            }
+                        }
+                    });
+                }
             });
 
         ImageView imageView = findViewById(R.id.to_OB);
