@@ -48,6 +48,8 @@ public class SettingsFragment extends Fragment {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                SettingsViewModel settingsViewModel = new SettingsViewModel(getActivity().getApplicationContext());
+                settingsViewModel.deleteProfile();
                 Intent intent = new Intent(getActivity(), MainActivity.class);
                 startActivity(intent);
                 getActivity().finish();

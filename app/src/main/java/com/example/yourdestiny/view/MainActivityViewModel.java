@@ -95,4 +95,18 @@ public class MainActivityViewModel {
 
         }
     }
+
+    public void refillTriumph(){
+        repository.db_T.triumphDao().DeleteTriumoh();
+        for (int i= 0; i < repository.triumphInfo.getNames().length; i++){
+            Triumph triumph = new Triumph(
+                    repository.triumphInfo.getNames(i),
+                    repository.triumphInfo.getTitles(i),
+                    repository.triumphInfo.getDesctuptions(i),
+                    repository.triumphInfo.getIsChecked(i)
+
+            );
+            repository.triumphDao.insertAll(triumph);
+        }
+    }
 }

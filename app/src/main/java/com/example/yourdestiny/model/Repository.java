@@ -12,6 +12,9 @@ import com.example.yourdestiny.model.guidesDB.Guide;
 import com.example.yourdestiny.model.guidesDB.GuideDao;
 import com.example.yourdestiny.model.guidesDB.GuidesDatabase;
 import com.example.yourdestiny.model.guidesDB.GuidesInfo;
+import com.example.yourdestiny.model.profileDB.Profile;
+import com.example.yourdestiny.model.profileDB.ProfileDao;
+import com.example.yourdestiny.model.profileDB.ProfileDatabase;
 import com.example.yourdestiny.model.triumphDB.Triumph;
 import com.example.yourdestiny.model.triumphDB.TriumphDao;
 import com.example.yourdestiny.model.triumphDB.TriumphDatabase;
@@ -42,7 +45,13 @@ public class Repository {
     public TriumphInfo triumphInfo;
     public TriumphDatabase db_T = null;
     public TriumphDao triumphDao = null;
+
     public List<Triumph> triumphs = null;
+
+
+    public ProfileDatabase db_P = null;
+    public ProfileDao profileDao = null;
+    public List<Profile> profiles = null;
 
     public Repository(Context context) {
         db = Room.databaseBuilder(context.getApplicationContext(),
@@ -69,6 +78,23 @@ public class Repository {
         triumphDao = db_T.triumphDao();
         triumphs = db_T.triumphDao().getAll();
         triumphInfo = new TriumphInfo();
+
+        db_P = Room.databaseBuilder(context.getApplicationContext(),
+                ProfileDatabase.class, "Profile").allowMainThreadQueries().build();
+        profileDao = db_P.profileDao();
+        profiles = db_P.profileDao().getAll();
+    }
+
+    public String getName_p(){
+        return db_P.profileDao().getName();
+    }
+    public String getMail_p(){
+        return db_P.profileDao().getMail();
+    }public String getPass_p(){
+        return db_P.profileDao().getPassword();
+    }
+    public void delete_data(){
+        db_P.profileDao().DeleteProfile();
     }
 
     public int check(){

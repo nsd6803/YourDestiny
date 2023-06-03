@@ -20,7 +20,8 @@ public interface TriumphDao {
 
     @Query("UPDATE Triumph set isChecked = :triumph WHERE name LIKE :name")
     void UpdateTriumph(List<String> triumph, String name);
-
+    @Query("DELETE FROM Triumph")
+    void DeleteTriumoh();
     @Insert
     void insertAll(Triumph... users);
 }

@@ -20,10 +20,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import com.example.yourdestiny.R;
+import com.example.yourdestiny.model.profileDB.Profile;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
     MainActivityViewModel mainActivityViewModel;
@@ -58,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         );
+
+
 
         mAuth = FirebaseAuth.getInstance();
         nickname = findViewById(R.id.editTextTextPersonName);
@@ -101,7 +105,14 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
+                                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                                user.getDisplayName().toString();
+                                mainActivityViewModel.repository.db_P.profileDao().DeleteProfile();
+                                Profile profile = new Profile(user.getDisplayName().toString(), nickname_, pass_);
+                                mainActivityViewModel.repository.db_P.profileDao().insertAll(profile);
+                                mainActivityViewModel.refillTriumph();
                                 Intent intent = new Intent(arg.getContext(), AppActivity.class);
+                                intent.putExtra("nickname", user.getDisplayName().toString());
                                 arg.getContext().startActivity(intent);
                                 finish();
                             } else {

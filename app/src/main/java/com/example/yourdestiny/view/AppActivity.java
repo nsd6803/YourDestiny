@@ -1,5 +1,6 @@
 package com.example.yourdestiny.view;
 
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 
@@ -15,13 +16,19 @@ import com.example.yourdestiny.databinding.ActivityAppBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class AppActivity extends AppCompatActivity {
-
+    private String nickname = null;
     private ActivityAppBinding binding;
     private NavController navController;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        Intent intent = getIntent();
+        nickname = new MainActivityViewModel(getApplicationContext()).repository.getName_p();
+        if(nickname == null){
+            Intent i = new Intent(getApplicationContext(),MainActivity.class);
+            startActivity(i);
+            finish();
+        }
         binding = ActivityAppBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         BottomNavigationView navView = findViewById(R.id.nav_view);
