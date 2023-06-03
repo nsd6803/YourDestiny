@@ -36,6 +36,15 @@ public class ProfileFragment extends Fragment {
         TextView textView = getView().findViewById(R.id.title_);
         textView.setText(R.string.title_profile);
 
+        ImageView to_settings = getView().findViewById(R.id.imageView17);
+        to_settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Navigation.findNavController(view).navigate(R.id.action_navigation_profile_to_navigation_settings);
+            }
+        });
+
         ImageView to_news = getView().findViewById(R.id.imageView19);
         to_news.setOnClickListener(new View.OnClickListener() {
             @Override

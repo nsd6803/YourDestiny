@@ -92,7 +92,7 @@
         android:layout_height="64dp"
         android:layout_marginBottom="12dp"
         android:ems="10"
-        android:hint="Ник"
+        android:hint="Почта"
         android:inputType="textPersonName"
         android:textColorHint="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"

@@ -65,6 +65,9 @@
         <action
             android:id="@+id/action_navigation_profile_to_navigation_api"
             app:destination="@id/navigation_api" />
+        <action
+            android:id="@+id/action_navigation_profile_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
     </fragment>
 
     <fragment
@@ -285,6 +288,17 @@
         <action
             android:id="@+id/action_navigation_armor_item_to_navigation_new"
             app:destination="@id/navigation_new" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.example.yourdestiny.view.ui.profile.SettingsFragment"
+        android:label="Настройки"
+        tools:layout="@layout/fragment_settings" >
+
+        <action
+            android:id="@+id/action_navigation_settings_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
     </fragment>
 
 </navigation>
