@@ -31,6 +31,9 @@ public interface ArmorDao {
     @Query("SELECT * FROM Armor WHERE neww LIKE 'Новое'")
     List<Armor> getNeww();
 
+    @Query("SELECT * FROM Armor WHERE for_class LIKE :clas AND for_subclass LIKE :subclass AND for_activity LIKE :activity")
+    List<Armor> getArmorForBuildCraft(String clas, String subclass, String activity);
+
     @Insert
     void insertAll(Armor... users);
 }

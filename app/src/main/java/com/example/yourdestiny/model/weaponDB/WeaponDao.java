@@ -29,6 +29,9 @@ public interface WeaponDao {
 
     @Query("SELECT * FROM Weapon WHERE neww LIKE 'Новое'")
     List<Weapon> getNeww();
+
+    @Query("SELECT * FROM Weapon WHERE for_class LIKE :clas AND for_subclass LIKE :subclass AND for_activity LIKE :activity")
+    List<Weapon> getWeaponForBuildCraft(String clas, String subclass, String activity);
     @Insert
     void insertAll(Weapon... users);
 }

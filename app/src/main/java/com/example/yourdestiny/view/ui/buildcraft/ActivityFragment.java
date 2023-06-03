@@ -16,11 +16,18 @@ import com.example.yourdestiny.R;
 
 public class ActivityFragment extends Fragment {
 
-
+    String clas;
+    String subclass;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            String value1 = bundle.getString("class");
+            String value2 = bundle.getString("subclass");
+            clas = value1;
+            subclass = value2;
+        }
     }
 
     @Override
@@ -36,7 +43,11 @@ public class ActivityFragment extends Fragment {
         raids.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_navigation_activity_to_navigation_result);
+                Bundle bundle = new Bundle();
+                bundle.putString("subclass", subclass);
+                bundle.putString("class", clas);
+                bundle.putString("activity", "Рейд");
+                Navigation.findNavController(view).navigate(R.id.action_navigation_activity_to_navigation_result, bundle);
             }
         });
 
@@ -44,7 +55,11 @@ public class ActivityFragment extends Fragment {
         strike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_navigation_activity_to_navigation_result);
+                Bundle bundle = new Bundle();
+                bundle.putString("subclass", subclass);
+                bundle.putString("class", clas);
+                bundle.putString("activity", "Налет");
+                Navigation.findNavController(view).navigate(R.id.action_navigation_activity_to_navigation_result, bundle);
             }
         });
 
@@ -52,7 +67,11 @@ public class ActivityFragment extends Fragment {
         gambit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_navigation_activity_to_navigation_result);
+                Bundle bundle = new Bundle();
+                bundle.putString("subclass", subclass);
+                bundle.putString("class", clas);
+                bundle.putString("activity", "Гамбит");
+                Navigation.findNavController(view).navigate(R.id.action_navigation_activity_to_navigation_result, bundle);
             }
         });
 
@@ -60,17 +79,14 @@ public class ActivityFragment extends Fragment {
         crucible.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_navigation_activity_to_navigation_result);
+                Bundle bundle = new Bundle();
+                bundle.putString("subclass", subclass);
+                bundle.putString("class", clas);
+                bundle.putString("activity", "Горнило");
+                Navigation.findNavController(view).navigate(R.id.action_navigation_activity_to_navigation_result, bundle);
             }
         });
 
-        ImageView back = getView().findViewById(R.id.imageView37);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_navigation_activity_to_navigation_subclass);
-            }
-        });
         ImageView cancel = getView().findViewById(R.id.imageView41);
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override

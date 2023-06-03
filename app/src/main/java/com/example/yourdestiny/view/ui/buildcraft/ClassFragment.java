@@ -35,21 +35,27 @@ public class ClassFragment extends Fragment {
         hunter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_navigation_class_to_navigation_subclass);
+                Bundle bundle = new Bundle();
+                bundle.putString("class", "Охотник");
+                Navigation.findNavController(view).navigate(R.id.action_navigation_class_to_navigation_subclass, bundle);
             }
         });
         ImageView titan = getView().findViewById(R.id.tit);
         titan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_navigation_class_to_navigation_subclass);
+                Bundle bundle = new Bundle();
+                bundle.putString("class", "Титан");
+                Navigation.findNavController(view).navigate(R.id.action_navigation_class_to_navigation_subclass,bundle);
             }
         });
         ImageView warlock = getView().findViewById(R.id.warl);
         warlock.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_navigation_class_to_navigation_subclass);
+                Bundle bundle = new Bundle();
+                bundle.putString("class", "Варлок");
+                Navigation.findNavController(view).navigate(R.id.action_navigation_class_to_navigation_subclass, bundle);
             }
         });
         ImageView cancel = getView().findViewById(R.id.imageView38);
