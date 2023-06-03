@@ -26,15 +26,19 @@ public class ArmorAdapter  extends RecyclerView.Adapter<ArmorAdapter.ViewHolder>
     List<String> titles;
     List<String> types;
     List<Integer> pic;
-
+    String clas;
+    String subclass;
+    String activity;
     String from_new;
+
+    String from_bc;
     private AdapterView.OnItemClickListener onItemClickListener;
 
     public void setOnItemClickListener(AdapterView.OnItemClickListener listener) {
         this.onItemClickListener = listener;
     }
 
-    public ArmorAdapter(Context context, List<Armor> weapons, String from_new) {
+    public ArmorAdapter(Context context, List<Armor> weapons, String from_new, String from_bc, String clas, String subclass, String activity) {
         this.context = context;
         this.armors = weapons;
         this.titles = Arrays.asList(new String[weapons.size()]);
@@ -46,6 +50,12 @@ public class ArmorAdapter  extends RecyclerView.Adapter<ArmorAdapter.ViewHolder>
             this.pic.set(i, weapons.get(i).getPic());
         }
         this.from_new = from_new;
+        this.from_bc = from_bc;
+        if(from_bc == "yes"){
+            this.clas = clas;
+            this.subclass = subclass;
+            this.activity = activity;
+        }
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -84,10 +94,15 @@ public class ArmorAdapter  extends RecyclerView.Adapter<ArmorAdapter.ViewHolder>
                 Bundle bundle = new Bundle();
                 bundle.putString("Name", holder.title.getText().toString());
                 bundle.putString("from", from_new);
+                bundle.putString("from_bc", from_bc);
                 if (from_new == "yes") {
                     Navigation.findNavController(v).navigate(R.id.action_navigation_new_to_navigation_armor_item, bundle);
-                }
-                else{
+                } else if (from_bc == "yes") {
+                    bundle.putString("class", clas);
+                    bundle.putString("subclass", subclass);
+                    bundle.putString("activity", activity);
+                    Navigation.findNavController(v).navigate(R.id.action_navigation_result_to_navigation_armor_item, bundle);
+                } else{
                     Navigation.findNavController(v).navigate(R.id.action_navigation_armor_to_navigation_armor_item, bundle);
                 }
             }

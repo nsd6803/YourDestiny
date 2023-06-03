@@ -199,6 +199,9 @@
         <action
             android:id="@+id/action_navigation_result_to_navigation_armor_item"
             app:destination="@id/navigation_armor_item" />
+        <action
+            android:id="@+id/action_navigation_result_to_navigation_legendary"
+            app:destination="@id/navigation_legendary" />
     </fragment>
 
     <fragment
@@ -247,6 +250,9 @@
         <action
             android:id="@+id/action_navigation_legendary_to_navigation_new"
             app:destination="@id/navigation_new" />
+        <action
+            android:id="@+id/action_navigation_legendary_to_navigation_result"
+            app:destination="@id/navigation_result" />
     </fragment>
 
     <fragment

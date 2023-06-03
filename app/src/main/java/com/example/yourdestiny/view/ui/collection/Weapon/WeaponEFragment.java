@@ -23,6 +23,11 @@ public class WeaponEFragment extends Fragment {
 
     Weapon weapon_info;
     String came_from;
+    String came_from_bc;
+
+    String clas;
+    String subclass;
+    String activity;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,8 +36,18 @@ public class WeaponEFragment extends Fragment {
             String value1 = bundle.getString("Name");
             CameFrom = value1;
             String from = bundle.getString("from");
+            String from_bc = bundle.getString("from_bc");
             CameFrom = value1;
             came_from = from;
+            came_from_bc = from_bc;
+        }
+        if (bundle != null) {
+            String value1 = bundle.getString("class");
+            String value2 = bundle.getString("subclass");
+            String value3 = bundle.getString("activity");
+            clas = value1;
+            subclass = value2;
+            activity = value3;
         }
     }
 
@@ -115,6 +130,13 @@ public class WeaponEFragment extends Fragment {
             public void onClick(View view) {
                 if (came_from == "yes") {
                     Navigation.findNavController(view).navigate(R.id.action_navigation_exotic_to_navigation_new);
+                }
+                else if(came_from_bc == "yes"){
+                    Bundle bundle = new Bundle();
+                    bundle.putString("class", clas);
+                    bundle.putString("subclass", subclass);
+                    bundle.putString("activity", activity);
+                    Navigation.findNavController(view).navigate(R.id.action_navigation_exotic_to_navigation_result, bundle);
                 }
                 else {
                     Navigation.findNavController(view).navigate(R.id.action_navigation_exotic_to_navigation_weapon);

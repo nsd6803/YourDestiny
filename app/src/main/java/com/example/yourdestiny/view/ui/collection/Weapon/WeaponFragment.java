@@ -35,6 +35,7 @@ public class WeaponFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_weapon, container, false);
+
     }
 
     @Override
@@ -61,7 +62,7 @@ public class WeaponFragment extends Fragment {
                 = new LinearLayoutManager(getActivity());
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
-        progAdapter = new WeaponAdapter(getActivity(), weaponViewModel.getLegenadry(), "no");
+        progAdapter = new WeaponAdapter(getActivity(), weaponViewModel.getLegenadry(), "no", "no", "", "", "");
         recyclerView.setAdapter(progAdapter);
 
         legendary.setOnClickListener(new View.OnClickListener() {
@@ -74,7 +75,7 @@ public class WeaponFragment extends Fragment {
                         = new LinearLayoutManager(getActivity());
                 recyclerView.setHasFixedSize(true);
                 recyclerView.setLayoutManager(layoutManager);
-                progAdapter = new WeaponAdapter(getActivity(), weaponViewModel.getLegenadry(), "no");
+                progAdapter = new WeaponAdapter(getActivity(), weaponViewModel.getLegenadry(), "no", "no", "", "", "");
                 recyclerView.setAdapter(progAdapter);
             }
         });
@@ -89,7 +90,7 @@ public class WeaponFragment extends Fragment {
                         = new LinearLayoutManager(getActivity());
                 recyclerView.setHasFixedSize(true);
                 recyclerView.setLayoutManager(layoutManager);
-                progAdapter = new WeaponAdapter(getActivity(), weaponViewModel.getExotic(), "no");
+                progAdapter = new WeaponAdapter(getActivity(), weaponViewModel.getExotic(), "no", "no","", "", "");
                 recyclerView.setAdapter(progAdapter);
             }
         });

@@ -55,7 +55,7 @@ public class NewFragment extends Fragment {
                 = new LinearLayoutManager(getActivity());
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
-        progAdapter = new WeaponAdapter(getActivity(), newVieModel.getNewWeapon(), "yes");
+        progAdapter = new WeaponAdapter(getActivity(), newVieModel.getNewWeapon(), "yes", "no","", "", "");
         recyclerView.setAdapter(progAdapter);
 
         weapon.setOnClickListener(new View.OnClickListener() {
@@ -67,7 +67,7 @@ public class NewFragment extends Fragment {
                         = new LinearLayoutManager(getActivity());
                 recyclerView.setHasFixedSize(true);
                 recyclerView.setLayoutManager(layoutManager);
-                progAdapter = new WeaponAdapter(getActivity(), newVieModel.getNewWeapon(), "yes");
+                progAdapter = new WeaponAdapter(getActivity(), newVieModel.getNewWeapon(), "yes", "no","", "", "");
                 recyclerView.setAdapter(progAdapter);
             }
         });
@@ -82,7 +82,7 @@ public class NewFragment extends Fragment {
                         = new LinearLayoutManager(getActivity());
                 recyclerView.setHasFixedSize(true);
                 recyclerView.setLayoutManager(layoutManager);
-                progAdapter = new ArmorAdapter(getActivity(), newVieModel.getNewArmor(), "yes");
+                progAdapter = new ArmorAdapter(getActivity(), newVieModel.getNewArmor(), "yes", "no","", "", "");
                 recyclerView.setAdapter(progAdapter);
             }
         });

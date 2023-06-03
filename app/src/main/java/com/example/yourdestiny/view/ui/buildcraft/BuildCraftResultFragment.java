@@ -1,7 +1,6 @@
 package com.example.yourdestiny.view.ui.buildcraft;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,8 +39,6 @@ public class BuildCraftResultFragment extends Fragment {
             clas = value1;
             subclass = value2;
             activity = value3;
-            Log.d("BCCCC", clas);
-            Log.d("BCCCC", subclass);
         }
     }
 
@@ -62,7 +59,7 @@ public class BuildCraftResultFragment extends Fragment {
                 = new LinearLayoutManager(getActivity());
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
-        progAdapter = new WeaponAdapter(getActivity(), buildCraftResultViewModel.getWeapon(clas, subclass, activity), "no");
+        progAdapter = new WeaponAdapter(getActivity(), buildCraftResultViewModel.getWeapon(clas, subclass, activity), "no", "yes", clas, subclass, activity);
         recyclerView.setAdapter(progAdapter);
 
         recyclerView2 = getView().findViewById(R.id.armors);
@@ -70,7 +67,7 @@ public class BuildCraftResultFragment extends Fragment {
         LinearLayoutManager layoutManager2
                 = new LinearLayoutManager(getActivity());
         recyclerView2.setLayoutManager(layoutManager2);
-        progAdapter2 = new ArmorAdapter(getActivity(), buildCraftResultViewModel.getArmor(clas, subclass, activity), "no");
+        progAdapter2 = new ArmorAdapter(getActivity(), buildCraftResultViewModel.getArmor(clas, subclass, activity), "no", "yes", clas, subclass, activity);
         recyclerView2.setAdapter(progAdapter2);
 
 

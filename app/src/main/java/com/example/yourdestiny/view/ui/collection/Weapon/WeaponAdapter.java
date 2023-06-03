@@ -32,14 +32,18 @@ public class WeaponAdapter extends RecyclerView.Adapter<WeaponAdapter.ViewHolder
 
     String from_new;
 
+    String from_bc;
 
+    String clas;
+    String subclass;
+    String activity;
     private AdapterView.OnItemClickListener onItemClickListener;
 
     public void setOnItemClickListener(AdapterView.OnItemClickListener listener) {
         this.onItemClickListener = listener;
     }
 
-    public WeaponAdapter (Context context, List<Weapon> weapons, String from_new){
+    public WeaponAdapter (Context context, List<Weapon> weapons, String from_new, String from_bc, String clas, String subclass, String activity){
         this.context = context;
         this.weapons = weapons;
         this.titles = Arrays.asList(new String[weapons.size()]);
@@ -55,6 +59,12 @@ public class WeaponAdapter extends RecyclerView.Adapter<WeaponAdapter.ViewHolder
             this.rare.set(i, weapons.get(i).getRare());
         }
         this.from_new = from_new;
+        this.from_bc = from_bc;
+        if(from_bc == "yes"){
+            this.clas = clas;
+            this.subclass = subclass;
+            this.activity = activity;
+        }
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
@@ -95,11 +105,25 @@ public class WeaponAdapter extends RecyclerView.Adapter<WeaponAdapter.ViewHolder
                 Bundle bundle = new Bundle();
                 bundle.putString("Name", holder.title.getText().toString());
                 bundle.putString("from", from_new);
+                bundle.putString("from_bc", from_bc);
                 if(from_new == "yes") {
                     if (Objects.equals(rare.get(position), "Экзотическое")) {
                         Navigation.findNavController(v).navigate(R.id.action_navigation_new_to_navigation_exotic, bundle);
                     } else {
                         Navigation.findNavController(v).navigate(R.id.action_navigation_new_to_navigation_legendary, bundle);
+                    }
+                }
+                else if(from_bc == "yes"){
+                    if (Objects.equals(rare.get(position), "Экзотическое")) {
+                        bundle.putString("class", clas);
+                        bundle.putString("subclass", subclass);
+                        bundle.putString("activity", activity);
+                        Navigation.findNavController(v).navigate(R.id.action_navigation_result_to_navigation_exotic, bundle);
+                    } else {
+                        bundle.putString("class", clas);
+                        bundle.putString("subclass", subclass);
+                        bundle.putString("activity", activity);
+                        Navigation.findNavController(v).navigate(R.id.action_navigation_result_to_navigation_legendary, bundle);
                     }
                 }
                 else{

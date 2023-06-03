@@ -65,7 +65,7 @@ public class ArmorFragment extends Fragment {
                 = new LinearLayoutManager(getActivity());
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
-        progAdapter = new ArmorAdapter(getActivity(), armorViewModel.getHunter(), "no");
+        progAdapter = new ArmorAdapter(getActivity(), armorViewModel.getHunter(), "no", "no","", "", "");
         recyclerView.setAdapter(progAdapter);
 
         hunter.setOnClickListener(new View.OnClickListener() {
@@ -80,7 +80,7 @@ public class ArmorFragment extends Fragment {
                         = new LinearLayoutManager(getActivity());
                 recyclerView.setHasFixedSize(true);
                 recyclerView.setLayoutManager(layoutManager);
-                progAdapter = new ArmorAdapter(getActivity(), armorViewModel.getHunter(), "no");
+                progAdapter = new ArmorAdapter(getActivity(), armorViewModel.getHunter(), "no", "no","", "", "");
                 recyclerView.setAdapter(progAdapter);
             }
         });
@@ -97,7 +97,7 @@ public class ArmorFragment extends Fragment {
                         = new LinearLayoutManager(getActivity());
                 recyclerView.setHasFixedSize(true);
                 recyclerView.setLayoutManager(layoutManager);
-                progAdapter = new ArmorAdapter(getActivity(), armorViewModel.getTitan(), "no");
+                progAdapter = new ArmorAdapter(getActivity(), armorViewModel.getTitan(), "no", "no","", "", "");
                 recyclerView.setAdapter(progAdapter);
             }
         });
@@ -114,7 +114,7 @@ public class ArmorFragment extends Fragment {
                         = new LinearLayoutManager(getActivity());
                 recyclerView.setHasFixedSize(true);
                 recyclerView.setLayoutManager(layoutManager);
-                progAdapter = new ArmorAdapter(getActivity(), armorViewModel.getWarlock(), "no");
+                progAdapter = new ArmorAdapter(getActivity(), armorViewModel.getWarlock(), "no", "no","", "", "");
                 recyclerView.setAdapter(progAdapter);
             }
         });
