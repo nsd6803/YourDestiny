@@ -48,7 +48,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/button2"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.884" />
 
     <EditText
         android:id="@+id/editTextTextPersonName3"
@@ -116,6 +116,7 @@
         android:id="@+id/button2"
         android:layout_width="183dp"
         android:layout_height="55dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="@color/red"
         android:text="Регистрация"
         android:textColor="@color/white"
@@ -123,11 +124,9 @@
         android:textColorHint="@color/white"
         android:textColorLink="@color/white"
         app:cornerRadius="56dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5"
-        app:layout_constraintVertical_bias="0.105" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
 
     <ImageView
         android:id="@+id/imageView3"
