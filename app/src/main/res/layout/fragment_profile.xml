@@ -11,12 +11,12 @@
         android:id="@+id/imageView20"
         android:layout_width="122dp"
         android:layout_height="106dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="8dp"
         android:src="@drawable/ellipse_9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/title_" />
 
     <TextView
         android:id="@+id/textView12"
@@ -35,39 +35,39 @@
 
     <ImageView
         android:id="@+id/imageView17"
-        android:layout_width="330dp"
-        android:layout_height="138dp"
+        android:layout_width="310dp"
+        android:layout_height="150dp"
         android:src="@drawable/group_47"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.342" />
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintVertical_bias="0.012" />
 
     <ImageView
         android:id="@+id/imageView18"
-        android:layout_width="337dp"
-        android:layout_height="159dp"
+        android:layout_width="310dp"
+        android:layout_height="160dp"
         android:src="@drawable/group_48"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.584" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView17"
+        app:layout_constraintVertical_bias="0.018" />
 
     <ImageView
         android:id="@+id/imageView19"
-        android:layout_width="333dp"
-        android:layout_height="179dp"
+        android:layout_width="310dp"
+        android:layout_height="160dp"
         android:src="@drawable/group_49"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.869" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView18"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/title_"

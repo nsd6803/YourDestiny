@@ -11,39 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/title_14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
-            android:gravity="center"
-            android:text="Оружие"
-            android:textColor="@color/white"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.154"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/title_5"
-            app:layout_constraintVertical_bias="0.012" />
-
-        <TextView
-            android:id="@+id/title_15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="44dp"
-            android:fontFamily="sans-serif-medium"
-            android:gravity="center"
-            android:text="Снаряжение"
-            android:textColor="@color/white"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.52"
-            app:layout_constraintStart_toEndOf="@+id/title_11"
-            app:layout_constraintTop_toBottomOf="@+id/title_5"
-            app:layout_constraintVertical_bias="0.012" />
-
         <View
             android:id="@+id/view2"
             android:layout_width="320dp"
@@ -54,18 +21,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/title_15"
             app:layout_constraintVertical_bias="0.014" />
-
-        <ImageView
-            android:id="@+id/imageView30"
-            android:layout_width="39dp"
-            android:layout_height="37dp"
-            android:layout_marginEnd="11dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/title_5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.018"
-            app:srcCompat="@drawable/back" />
 
         <TextView
             android:id="@+id/title_5"
@@ -85,12 +40,57 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/new_items"
             android:layout_width="match_parent"
-            android:layout_height="581dp"
-            android:layout_marginTop="20dp"
+            android:layout_height="match_parent"
+            android:paddingTop="130sp"
+            android:paddingBottom="55sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/title_14"
-            app:layout_constraintVertical_bias="0.046" />
+            app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+        <ImageView
+            android:id="@+id/imageView30"
+            android:layout_width="39dp"
+            android:layout_height="37dp"
+            android:layout_marginEnd="11dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/title_5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.018"
+            app:srcCompat="@drawable/back" />
+
+        <TextView
+            android:id="@+id/title_15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="44dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="Снаряжение"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toEndOf="@+id/title_11"
+            app:layout_constraintTop_toBottomOf="@+id/title_5"
+            app:layout_constraintVertical_bias="0.012" />
+
+        <TextView
+            android:id="@+id/title_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="Оружие"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.154"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_5"
+            app:layout_constraintVertical_bias="0.012" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

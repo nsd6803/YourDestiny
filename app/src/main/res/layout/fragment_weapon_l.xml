@@ -13,7 +13,7 @@
 
         <ImageView
             android:id="@+id/imageView51"
-            android:layout_width="367dp"
+            android:layout_width="match_parent"
             android:layout_height="207dp"
             android:scaleType="fitXY"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -99,32 +99,22 @@
             app:layout_constraintTop_toBottomOf="@+id/item_predicat"
             app:layout_constraintVertical_bias="0.0" />
 
-        <ImageView
-            android:id="@+id/imageView49"
-            android:layout_width="39dp"
-            android:layout_height="37dp"
-            android:layout_marginEnd="11dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/title_4"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.018"
-            app:srcCompat="@drawable/back" />
-
         <ScrollView
             android:id="@+id/scrollView2"
             android:layout_width="match_parent"
-            android:layout_height="481dp"
+            android:layout_height="match_parent"
+            android:paddingTop="220sp"
+            android:paddingBottom="55sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView51"
-            app:layout_constraintVertical_bias="0.0">
+            app:layout_constraintVertical_bias="1.0">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent">
 
                 <ProgressBar
                     android:id="@+id/progressBar14"
@@ -491,6 +481,18 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
+
+        <ImageView
+            android:id="@+id/imageView49"
+            android:layout_width="39dp"
+            android:layout_height="37dp"
+            android:layout_marginEnd="11dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/title_4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.018"
+            app:srcCompat="@drawable/back" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
