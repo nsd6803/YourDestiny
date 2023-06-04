@@ -90,8 +90,18 @@ public class Repository {
     }
     public String getMail_p(){
         return db_P.profileDao().getMail();
-    }public String getPass_p(){
+    }
+    public String getPass_p(){
         return db_P.profileDao().getPassword();
+    }
+    public void setName_p(String name){
+         db_P.profileDao().setName(name);
+    }
+    public void setMail_p(String mail){
+        db_P.profileDao().setMail(mail);
+    }
+    public void setPass_p(String pass){
+        db_P.profileDao().setPassword(pass);
     }
     public void delete_data(){
         db_P.profileDao().DeleteProfile();

@@ -2,6 +2,8 @@ package com.example.yourdestiny.view.ui.profile;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,6 +20,8 @@ import androidx.navigation.Navigation;
 
 import com.example.yourdestiny.R;
 import com.example.yourdestiny.view.MainActivity;
+
+import java.util.Objects;
 
 
 public class SettingsFragment extends Fragment {
@@ -68,7 +73,19 @@ public class SettingsFragment extends Fragment {
         change_name_b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                String name_ = change_name.getText().toString();
+                if(TextUtils.isEmpty(name_)){
+                    Toast.makeText(getActivity(), "Введите новое имя", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if(Objects.equals(settingsViewModel.getName(), name_)){
+                    Toast.makeText(getActivity(), "У вас данный никнейм", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                settingsViewModel.repository.setName_p(name_);
+                settingsViewModel.changeName(name_);
+                name_id.setText(settingsViewModel.getName());
+                change_name.setText("");
             }
         });
 
@@ -77,7 +94,27 @@ public class SettingsFragment extends Fragment {
         change_mail_b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String mail_ = change_mail.getText().toString();
+                Log.d("MEOWWW", mail_);
+                if(TextUtils.isEmpty(mail_)){
+                    Toast.makeText(getActivity(), "Введите новую почту", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if(Objects.equals(settingsViewModel.getMail(), mail_)){
+                    Toast.makeText(getActivity(), "У вас эта почта", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
+                settingsViewModel.repository.setMail_p(mail_);
+                int result = settingsViewModel.changeMail(mail_);
+                System.out.println(result);
+                if(result == 0) {
+                    mail_id.setText(settingsViewModel.getMail());
+                }
+                else{
+                    settingsViewModel.repository.setMail_p(String.valueOf(mail_id));
+                }
+                change_mail.setText("");
             }
         });
 
@@ -86,7 +123,14 @@ public class SettingsFragment extends Fragment {
         change_pass_b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                String pass_ = change_pass.getText().toString();
+                if(TextUtils.isEmpty(pass_)){
+                    Toast.makeText(getActivity(), "Введите новый пароль", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                settingsViewModel.changePass(pass_);
+                settingsViewModel.changePass(pass_);
+                change_pass.setText("");
             }
         });
     }

@@ -48,6 +48,7 @@
             android:layout_marginTop="52dp"
             android:backgroundTint="@color/green"
             android:text="Button"
+            android:textColor="@color/green"
             app:layout_constraintEnd_toEndOf="@+id/imageView16"
             app:layout_constraintHorizontal_bias="0.55"
             app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName11"
@@ -60,6 +61,7 @@
             android:layout_marginTop="52dp"
             android:backgroundTint="@color/green"
             android:text="Button"
+            android:textColor="@color/green"
             app:layout_constraintEnd_toEndOf="@+id/imageView16"
             app:layout_constraintHorizontal_bias="0.55"
             app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName8"
@@ -256,9 +258,11 @@
             android:layout_marginTop="40dp"
             android:backgroundTint="@color/green"
             android:text="Button"
+            android:textColor="@color/green"
             app:layout_constraintEnd_toEndOf="@+id/imageView16"
             app:layout_constraintHorizontal_bias="0.555"
             app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName7"
-            app:layout_constraintTop_toBottomOf="@+id/textView60" />
+            app:layout_constraintTop_toBottomOf="@+id/textView60"
+            app:rippleColor="@color/black" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

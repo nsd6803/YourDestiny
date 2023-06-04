@@ -27,6 +27,15 @@ public interface ProfileDao {
     @Query("SELECT password FROM Profile LIMIT 1")
     String getPassword();
 
+    @Query("UPDATE Profile SET name=:name")
+    void setName(String name);
+
+    @Query("UPDATE Profile SET mail=:mail")
+    void setMail(String mail);
+
+    @Query("UPDATE Profile SET password=:pass")
+    void setPassword(String pass);
+
     @Query("DELETE FROM Profile")
     void DeleteProfile();
 
