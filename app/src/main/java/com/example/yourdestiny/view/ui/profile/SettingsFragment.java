@@ -5,7 +5,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -36,8 +39,13 @@ public class SettingsFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        SettingsViewModel settingsViewModel = new SettingsViewModel(getActivity().getApplicationContext());
         back = getView().findViewById(R.id.imageView43);
         logout = getView().findViewById(R.id.imageView37);
+        TextView name_id = getView().findViewById(R.id.textView50);
+        name_id.setText(settingsViewModel.getName());
+        TextView mail_id = getView().findViewById(R.id.textView60);
+        mail_id.setText(settingsViewModel.getMail());
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,7 +56,6 @@ public class SettingsFragment extends Fragment {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SettingsViewModel settingsViewModel = new SettingsViewModel(getActivity().getApplicationContext());
                 settingsViewModel.deleteProfile();
                 Intent intent = new Intent(getActivity(), MainActivity.class);
                 startActivity(intent);
@@ -56,5 +63,31 @@ public class SettingsFragment extends Fragment {
             }
         });
 
+        EditText change_name = getView().findViewById(R.id.editTextTextPersonName7);
+        Button change_name_b = getView().findViewById(R.id.button8);
+        change_name_b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        EditText change_mail = getView().findViewById(R.id.editTextTextPersonName8);
+        Button change_mail_b = getView().findViewById(R.id.button12);
+        change_mail_b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        EditText change_pass = getView().findViewById(R.id.editTextTextPersonName11);
+        Button change_pass_b = getView().findViewById(R.id.button13);
+        change_pass_b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 }

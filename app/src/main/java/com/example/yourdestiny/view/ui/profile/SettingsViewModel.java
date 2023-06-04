@@ -18,4 +18,16 @@ public class SettingsViewModel extends ViewModel {
         repository.delete_data();
     }
 
+    public String getName(){
+        return repository.getName_p();
+    }
+
+    public String getMail(){
+        return repository.getMail_p();
+    }
+
+    public String getPass(){
+        return repository.getPass_p();
+    }
+
 }

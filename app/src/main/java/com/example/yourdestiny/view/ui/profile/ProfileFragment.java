@@ -35,7 +35,8 @@ public class ProfileFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         TextView textView = getView().findViewById(R.id.title_);
         textView.setText(R.string.title_profile);
-
+        TextView text_name = getView().findViewById(R.id.textView12);
+        text_name.setText(new SettingsViewModel(getActivity().getApplicationContext()).getName());
         ImageView to_settings = getView().findViewById(R.id.imageView17);
         to_settings.setOnClickListener(new View.OnClickListener() {
             @Override
