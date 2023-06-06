@@ -15,12 +15,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.yourdestiny.R;
+import com.example.yourdestiny.viewmodel.GameActivityViewModel;
 
 import java.util.Objects;
 
 
 public class GameActivityFragment extends Fragment {
-    private  GameActivityViewModel gameActivityViewModel;
+    private GameActivityViewModel gameActivityViewModel;
     private String CameFrom;
     RecyclerView recyclerView;
 

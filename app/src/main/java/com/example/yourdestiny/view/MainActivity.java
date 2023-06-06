@@ -21,6 +21,7 @@ import androidx.core.app.ActivityCompat;
 
 import com.example.yourdestiny.R;
 import com.example.yourdestiny.model.profileDB.Profile;
+import com.example.yourdestiny.viewmodel.MainActivityViewModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;

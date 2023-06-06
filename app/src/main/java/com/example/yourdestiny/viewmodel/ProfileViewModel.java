@@ -1,4 +1,4 @@
-package com.example.yourdestiny.view.ui.profile;
+package com.example.yourdestiny.viewmodel;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

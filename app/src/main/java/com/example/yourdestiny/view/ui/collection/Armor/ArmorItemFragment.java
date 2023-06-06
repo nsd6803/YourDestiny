@@ -14,6 +14,7 @@ import androidx.navigation.Navigation;
 
 import com.example.yourdestiny.R;
 import com.example.yourdestiny.model.armorDB.Armor;
+import com.example.yourdestiny.viewmodel.ArmorItemViewModel;
 
 
 public class ArmorItemFragment extends Fragment {

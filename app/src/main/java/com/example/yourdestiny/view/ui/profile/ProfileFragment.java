@@ -15,6 +15,8 @@ import androidx.navigation.Navigation;
 
 import com.example.yourdestiny.R;
 import com.example.yourdestiny.databinding.FragmentProfileBinding;
+import com.example.yourdestiny.viewmodel.ProfileViewModel;
+import com.example.yourdestiny.viewmodel.SettingsViewModel;
 
 public class ProfileFragment extends Fragment {
 

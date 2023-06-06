@@ -1,4 +1,4 @@
-package com.example.yourdestiny.view;
+package com.example.yourdestiny.viewmodel;
 
 import android.content.Context;
 
@@ -10,7 +10,7 @@ import com.example.yourdestiny.model.weaponDB.Weapon;
 
 public class MainActivityViewModel {
     Context context;
-    Repository repository;
+    public Repository repository;
     public MainActivityViewModel(Context applicationContext) {
         context =  applicationContext;
         repository = new Repository(context);

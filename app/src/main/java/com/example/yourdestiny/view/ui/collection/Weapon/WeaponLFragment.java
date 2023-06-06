@@ -15,6 +15,7 @@ import androidx.navigation.Navigation;
 
 import com.example.yourdestiny.R;
 import com.example.yourdestiny.model.weaponDB.Weapon;
+import com.example.yourdestiny.viewmodel.WeaponEViewModel;
 
 public class WeaponLFragment extends Fragment {
     WeaponEViewModel weaponEViewModel;

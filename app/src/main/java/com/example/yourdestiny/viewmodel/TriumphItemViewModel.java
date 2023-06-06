@@ -1,4 +1,4 @@
-package com.example.yourdestiny.view.ui.triumph;
+package com.example.yourdestiny.viewmodel;
 
 import android.content.Context;
 
@@ -9,7 +9,7 @@ import com.example.yourdestiny.model.triumphDB.Triumph;
 
 public class TriumphItemViewModel extends ViewModel {
     Context context;
-    Repository repository;
+    public Repository repository;
 
     String name_triumph;
 

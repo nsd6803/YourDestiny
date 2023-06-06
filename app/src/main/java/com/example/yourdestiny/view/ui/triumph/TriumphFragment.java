@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.yourdestiny.R;
 import com.example.yourdestiny.databinding.FragmentTriumphBinding;
+import com.example.yourdestiny.viewmodel.TriumphViewModel;
 
 public class TriumphFragment extends Fragment {
 

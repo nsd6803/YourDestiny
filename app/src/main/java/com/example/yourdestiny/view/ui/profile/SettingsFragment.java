@@ -20,6 +20,7 @@ import androidx.navigation.Navigation;
 
 import com.example.yourdestiny.R;
 import com.example.yourdestiny.view.MainActivity;
+import com.example.yourdestiny.viewmodel.SettingsViewModel;
 
 import java.util.Objects;
 

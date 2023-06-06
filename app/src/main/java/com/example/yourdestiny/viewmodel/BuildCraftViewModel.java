@@ -1,16 +1,16 @@
-package com.example.yourdestiny.view.ui.triumph;
+package com.example.yourdestiny.viewmodel;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class TriumphViewModel extends ViewModel {
+public class BuildCraftViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public TriumphViewModel() {
+    public BuildCraftViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is triumph fragment");
+        mText.setValue("This is buildcraft fragment");
     }
 
     public LiveData<String> getText() {

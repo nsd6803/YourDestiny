@@ -1,4 +1,4 @@
-package com.example.yourdestiny.view.ui.collection.Armor;
+package com.example.yourdestiny.viewmodel;
 
 import android.content.Context;
 

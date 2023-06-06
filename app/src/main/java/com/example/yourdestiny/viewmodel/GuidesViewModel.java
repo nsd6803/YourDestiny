@@ -1,4 +1,4 @@
-package com.example.yourdestiny.view.ui.collection;
+package com.example.yourdestiny.viewmodel;
 
 import android.graphics.Bitmap;
 
@@ -6,14 +6,14 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class CollectionViewModel extends ViewModel {
+public class GuidesViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
     private  MutableLiveData<Boolean> isStarted = new MutableLiveData<Boolean>(false);
     private MutableLiveData<Integer> value;
     MutableLiveData<Bitmap> bitmap = new MutableLiveData<>();
-    public CollectionViewModel() {
+    public GuidesViewModel() {
         mText = new MutableLiveData<>();
         mText.setValue("This is guides fragment");
     }
@@ -28,4 +28,8 @@ public class CollectionViewModel extends ViewModel {
         }
         return value;
     }
+
+
+
+
 }

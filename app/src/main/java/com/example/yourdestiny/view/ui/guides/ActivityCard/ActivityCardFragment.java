@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.yourdestiny.R;
 import com.example.yourdestiny.view.ui.guides.GameActivityFragment;
+import com.example.yourdestiny.viewmodel.ActivityCardViewModel;
 
 import java.util.Arrays;
 

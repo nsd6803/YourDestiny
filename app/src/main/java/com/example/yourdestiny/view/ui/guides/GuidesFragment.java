@@ -20,6 +20,7 @@ import androidx.work.WorkManager;
 import com.example.yourdestiny.R;
 import com.example.yourdestiny.databinding.FragmentGuidesBinding;
 import com.example.yourdestiny.model.Repository;
+import com.example.yourdestiny.viewmodel.GuidesViewModel;
 
 public class GuidesFragment extends Fragment {
     private GuidesViewModel guidesViewModel;

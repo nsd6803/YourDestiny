@@ -16,6 +16,7 @@ import androidx.navigation.Navigation;
 import com.example.yourdestiny.R;
 import com.example.yourdestiny.databinding.FragmentCollectionBinding;
 import com.example.yourdestiny.model.Repository;
+import com.example.yourdestiny.viewmodel.CollectionViewModel;
 
 public class CollectionFragment extends Fragment {
     private FragmentCollectionBinding binding;

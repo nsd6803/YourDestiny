@@ -190,7 +190,7 @@
 
     <fragment
         android:id="@+id/navigation_result"
-        android:name="com.example.yourdestiny.view.ui.buildcraft.BuildCraftResultFragment"
+        android:name="com.example.yourdestiny.viewmodel.BuildCraftResultFragment"
         android:label="Результат"
         tools:layout="@layout/fragment_build_craft_result" >
         <action

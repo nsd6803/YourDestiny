@@ -1,4 +1,4 @@
-package com.example.yourdestiny.view.ui.profile;
+package com.example.yourdestiny.viewmodel;
 
 import android.content.Context;
 import android.widget.Toast;
@@ -15,7 +15,7 @@ import com.google.firebase.auth.UserProfileChangeRequest;
 
 public class SettingsViewModel extends ViewModel {
     Context context;
-    Repository repository;
+    public Repository repository;
     FirebaseUser user;
     public SettingsViewModel(Context applicationContext) {
         user = FirebaseAuth.getInstance().getCurrentUser();

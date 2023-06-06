@@ -1,4 +1,4 @@
-package com.example.yourdestiny.view.ui.collection.Weapon;
+package com.example.yourdestiny.viewmodel;
 
 import android.content.Context;
 
@@ -7,15 +7,16 @@ import androidx.lifecycle.ViewModel;
 import com.example.yourdestiny.model.Repository;
 import com.example.yourdestiny.model.weaponDB.Weapon;
 
-public class WeaponEViewModel extends ViewModel {
+public class WeaponLViewModel extends ViewModel {
     Context context;
     Repository repository;
-    public WeaponEViewModel(Context applicationContext) {
-        context =  applicationContext;
+
+    public WeaponLViewModel(Context applicationContext) {
+        context = applicationContext;
         repository = new Repository(context);
     }
 
-    public Weapon getWeaponInfo(String name){
+    public Weapon getWeaponInfo(String name) {
         return repository.weaponDao.getWeapon(name);
     }
 }

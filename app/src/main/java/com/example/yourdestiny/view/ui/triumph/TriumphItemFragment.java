@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.yourdestiny.R;
+import com.example.yourdestiny.viewmodel.TriumphItemViewModel;
 
 import java.util.Objects;
 

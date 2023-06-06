@@ -14,6 +14,7 @@ import androidx.navigation.Navigation;
 
 import com.example.yourdestiny.R;
 import com.example.yourdestiny.databinding.FragmentBuildcraftBinding;
+import com.example.yourdestiny.viewmodel.BuildCraftViewModel;
 
 public class BuildCraftFragment extends Fragment {
 

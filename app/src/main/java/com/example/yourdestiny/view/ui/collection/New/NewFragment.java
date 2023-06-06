@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.yourdestiny.R;
 import com.example.yourdestiny.view.ui.collection.Armor.ArmorAdapter;
 import com.example.yourdestiny.view.ui.collection.Weapon.WeaponAdapter;
+import com.example.yourdestiny.viewmodel.NewVieModel;
 
 
 public class NewFragment extends Fragment {

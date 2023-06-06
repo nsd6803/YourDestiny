@@ -13,6 +13,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.example.yourdestiny.R;
 import com.example.yourdestiny.databinding.ActivityAppBinding;
+import com.example.yourdestiny.viewmodel.MainActivityViewModel;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class AppActivity extends AppCompatActivity {
