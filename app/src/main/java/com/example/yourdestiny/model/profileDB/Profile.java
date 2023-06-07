@@ -18,8 +18,6 @@ public class Profile {
     @ColumnInfo(name = "password")
     public String password;
 
-
-
     public Profile(String names, String mail, String password) {
         this.name = names;
         this.mail = mail;

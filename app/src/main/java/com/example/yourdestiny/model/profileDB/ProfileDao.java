@@ -11,7 +11,6 @@ public interface ProfileDao {
     @Query("SELECT * FROM Profile")
     List<Profile> getAll();
 
-
     @Query("SELECT COUNT(*) FROM Profile")
     int getRowCount();
 
@@ -41,6 +40,4 @@ public interface ProfileDao {
 
     @Insert
     void insertAll(Profile... users);
-
-
 }

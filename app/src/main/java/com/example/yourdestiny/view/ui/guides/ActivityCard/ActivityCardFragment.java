@@ -58,7 +58,7 @@ public class ActivityCardFragment extends Fragment {
         activityCardViewModel = new ActivityCardViewModel(getActivity().getApplicationContext());
         Title.setText(activityCardViewModel.getActivityInfo(Name).getName());
         Predicat.setText('"'+activityCardViewModel.getActivityInfo(Name).getPredicat()+'"');
-        Difficulty.setText(activityCardViewModel.getActivityInfo(Name).getDifficulty());
+        Difficulty.setText(activityCardViewModel.getActivityInfo(Name).getDifficulty()+"/5");
         imageView.setImageResource(activityCardViewModel.getActivityInfo(Name).getGuide_pic());
 
         ImageView back = getView().findViewById(R.id.imageView15);
