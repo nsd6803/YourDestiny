@@ -71,6 +71,10 @@ public class SignUp extends AppCompatActivity {
                     Toast.makeText(SignUp.this, "Повторите пароль", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                if(pass_ != pass_conf_){
+                    Toast.makeText(SignUp.this, "Пароли не совпадают", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 mAuth.createUserWithEmailAndPassword(email_, pass_)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
