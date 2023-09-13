@@ -59,10 +59,10 @@ public class TriumphItemFragment extends Fragment {
         triumphItemViewModel = new TriumphItemViewModel(getActivity().getApplicationContext(), Title);
         ProgressBar progressBar = getView().findViewById(R.id.progressBar);
 
-        progressBar.setProgress((int)((changeState()/(float)triumphItemViewModel.repository.db_T.triumphDao().getTriumph(Title).getIsChecked().size())*100));
-        if(changeState() == triumphItemViewModel.repository.db_T.triumphDao().getTriumph(Title).getIsChecked().size()){
-            textView.setTextColor(getResources().getColor(R.color.green));
-        }
+        //progressBar.setProgress((int)((changeState()/(float)triumphItemViewModel.repository.db_T.triumphDao().getTriumph(Title).getIsChecked().size())*100));
+        //if(changeState() == triumphItemViewModel.repository.db_T.triumphDao().getTriumph(Title).getIsChecked().size()){
+        //    textView.setTextColor(getResources().getColor(R.color.green));
+        //}
 
 
         recyclerView = getView().findViewById(R.id.triumph_tasks);

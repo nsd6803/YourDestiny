@@ -72,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
         registr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg) {
+                prefs.edit().putBoolean("isFirstRun", true).apply();
                 Intent intent = new Intent(arg.getContext(), SignUp.class);
                 arg.getContext().startActivity(intent);
             }
@@ -81,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
         pass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg) {
+                prefs.edit().putBoolean("isFirstRun", true).apply();
                 Intent intent = new Intent(arg.getContext(), PassRestore.class);
                 arg.getContext().startActivity(intent);
             }
@@ -90,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View arg) {
+
                     String nickname_ = nickname.getText().toString();
                     String pass_ = passwrd.getText().toString();
                     Log.d("PASSWORD", pass_);
@@ -131,6 +134,7 @@ public class MainActivity extends AppCompatActivity {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg) {
+                prefs.edit().putBoolean("isFirstRun", true).apply();
                 Intent intent = new Intent(arg.getContext(), OnBoarding.class);
                 arg.getContext().startActivity(intent);
             }

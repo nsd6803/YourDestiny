@@ -18,11 +18,11 @@
         <activity
             android:name=".view.OnBoarding"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+/>
         <activity
             android:name=".view.AppActivity"
             android:exported="true"
-            android:screenOrientation="portrait">
+ >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -31,15 +31,15 @@
         <activity
             android:name=".view.PassRestore"
             android:exported="false"
-            android:screenOrientation="portrait" />
+             />
         <activity
             android:name=".view.SignUp"
             android:exported="false"
-            android:screenOrientation="portrait" />
+             />
         <activity
             android:name=".view.MainActivity"
             android:exported="false"
-            android:screenOrientation="portrait" >
+           >
         </activity>
 
     </application>
